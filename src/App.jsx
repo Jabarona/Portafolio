@@ -135,47 +135,46 @@ function App() {
       <MainNavbar />
       
       <div className="App-wrapper">
+        {/* SECCIÓN QUIEN SOY - ADAPTADA AL NUEVO DISEÑO */}
+<Container fluid id="quien-soy" className="hero-section text-center d-flex align-items-center justify-content-center">
+  <Row className="justify-content-center"> {/* Centramos el contenido */}
+    <Col md={10} lg={8}> {/* Ocupa más espacio para el texto */}
+      <p className="hero-greeting animate__animated animate__fadeInDown">¡HOLA, SOY</p>
+      <h1 className="hero-name animate__animated animate__fadeInLeft">JARVI BARONA</h1>
+      <p className="hero-title animate__animated animate__fadeInUp">
+        Un Desarrollador Frontend apasionado por construir experiencias web increíbles.
+      </p>
+      <p className="hero-description animate__animated animate__fadeInUp">
+        Apasionado por el desarrollo web y la creación de soluciones innovadoras que impactan positivamente.
+      </p>
+      <Button 
+        variant="outline-dark" 
+        size="lg" 
+        href="#proyectos" 
+        className="hero-cta-button animate__animated animate__zoomIn"
+      >
+        VER MIS PROYECTOS
+      </Button>
+    </Col>
+  </Row>
+
+  {/* Iconos Sociales Fijos a la izquierda (nueva posición) */}
+  <div className="social-icons-fixed animate__animated animate__fadeInLeft">
+    <a href="https://www.linkedin.com/in/jarvi-barona-burbano-4a0998252" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <FaLinkedin />
+    </a>
+    <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <FaGithub />
+    </a>
+    <a href="https://instagram.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <FaInstagram />
+    </a>
+  </div>
+</Container>
+{/* FIN SECCIÓN QUIEN SOY */}
         
-        {/* 2. Tu sección "Sobre Mí" (CORREGIDO: id sin espacio) */}
-        <Container fluid id="quien-soy" style={{ paddingTop: '80px', paddingBottom: '80px', minHeight: '80vh' }}>
-          <Row className="align-items-center">
-            
-            <Col md={7} lg={8} className="hero-text">
-              <h1>
-                Jarvi Barona. 
-              </h1>
-              {/* Aquí puedes volver a poner tu <div className="yellow-underline"></div> si quieres */}
-              
-              <p className="lead">
-                Ingeniero en Informática & Desarrollador de Software.
-              </p>
-              <p>
-                Apasionado por el desarrollo web...
-              </p>
-              <div className="social-icons-hero">
-                {/* FALTABA TU LINKEDIN AQUÍ */}
-                <a href="https://www.linkedin.com/in/jarvi-barona-burbano-4a0998252" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <FaLinkedin />
-                </a>
-                <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <FaGithub />
-                </a>
-                <a href="https://instagram.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  <FaInstagram />
-                </a>
-              </div>
-            </Col>
-
-            <Col md={5} lg={4} className="text-center hero-image-col">
-              <Image 
-                src="/" // <-- ¡RECUERDA CAMBIAR ESTO!
-                fluid
-                alt="Mi foto de perfil"
-              />
-            </Col>
-
-          </Row>
-        </Container>
+        
+        
 
         {/* 3. Sección Habilidades */}
         <Container fluid className="skills-section">
@@ -238,7 +237,7 @@ function App() {
                     <div>
                       {/* (Botones corregidos a estilo uniforme) */}
                       <Button 
-                        variant="outline-light" 
+                        variant="outline-dark" 
                         className="me-2 mb-2"
                         onClick={() => handleShowModal({
                           title: 'Aplicación de Tareas (Full-Stack)',
@@ -251,7 +250,7 @@ function App() {
                         Ver más
                       </Button>
                       <Button 
-                        variant="outline-light" 
+                        variant="outline-dark" 
                         href="[LINK_A_TU_DEMO_1]" 
                         target="_blank" 
                         className="me-2 mb-2"
@@ -259,7 +258,7 @@ function App() {
                         <FaExternalLinkAlt className="me-1" /> Demo
                       </Button>
                       <Button 
-                        variant="outline-light" 
+                        variant="outline-dark" 
                         href="[LINK_A_TU_GITHUB_1]" 
                         target="_blank"
                         className="mb-2"
@@ -281,11 +280,24 @@ function App() {
                       Interfaz interactiva creada con React que consume la API de 'The Movie Database'...
                     </Card.Text>
                     <div>
-                      {/* ¡AÑADE EL BOTÓN 'VER MÁS' AQUÍ COMO EN EL PROYECTO 1! */}
-                      <Button variant="outline-light" href="[LINK_A_TU_DEMO_2]" target="_blank" className="me-2 mb-2">
+                                            <Button 
+                        variant="outline-dark" 
+                        className="me-2 mb-2"
+                        onClick={() => handleShowModal({
+                          title: 'Aplicación de Tareas (Full-Stack)',
+                          image: '/web.png',
+                          longDescription: 'Aquí puedes escribir una descripción mucho más larga...',
+                          demoLink: '[LINK_A_TU_DEMO_1]',
+                          githubLink: '[LINK_A_TU_GITHUB_1]'
+                        })}
+                      >
+                        Ver más
+                      </Button>
+                    
+                      <Button variant="outline-dark" href="[LINK_A_TU_DEMO_2]" target="_blank" className="me-2 mb-2">
                         <FaExternalLinkAlt className="me-1" /> Demo
                       </Button>
-                      <Button variant="outline-light" href="[LINK_A_TU_GITHUB_2]" target="_blank" className="mb-2">
+                      <Button variant="outline-dark" href="[LINK_A_TU_GITHUB_2]" target="_blank" className="mb-2">
                         <FaGithub className="me-1" /> Código
                       </Button>
                     </div>
@@ -303,11 +315,24 @@ function App() {
                       Diseño de una landing page estática responsiva para un cliente...
                     </Card.Text>
                     <div>
-                      {/* ¡AÑADE EL BOTÓN 'VER MÁS' AQUÍ COMO EN EL PROYECTO 1! */}
-                      <Button variant="outline-light" href="[LINK_A_TU_DEMO_3]" target="_blank" className="me-2 mb-2">
+                                            <Button 
+                        variant="outline-dark" 
+                        className="me-2 mb-2"
+                        onClick={() => handleShowModal({
+                          title: 'Aplicación de Tareas (Full-Stack)',
+                          image: '/web.png',
+                          longDescription: 'Aquí puedes escribir una descripción mucho más larga...',
+                          demoLink: '[LINK_A_TU_DEMO_1]',
+                          githubLink: '[LINK_A_TU_GITHUB_1]'
+                        })}
+                      >
+                        Ver más
+                      </Button>
+                      
+                      <Button variant="outline-dark" href="[LINK_A_TU_DEMO_3]" target="_blank" className="me-2 mb-2">
                         <FaExternalLinkAlt className="me-1" /> Demo
                       </Button>
-                      <Button variant="outline-light" href="[LINK_A_TU_GITHUB_3]" target="_blank" className="mb-2">
+                      <Button variant="outline-dark" href="[LINK_A_TU_GITHUB_3]" target="_blank" className="mb-2">
                         <FaGithub className="me-1" /> Código
                       </Button>
                     </div>
@@ -420,10 +445,10 @@ function App() {
                 </p>
               </Modal.Body>
               <Modal.Footer className="bg-dark">
-                <Button variant="primary" href={activeProject.demoLink} target="_blank">
+                <Button variant="outline-light" href={activeProject.demoLink} target="_blank">
                   <FaExternalLinkAlt className="me-1" /> Ver Demo
                 </Button>
-                <Button variant="secondary" href={activeProject.githubLink} target="_blank">
+                <Button variant="outline-light" href={activeProject.githubLink} target="_blank">
                   <FaGithub className="me-1" /> Código
                 </Button>
                 <Button variant="outline-light" onClick={handleCloseModal}>

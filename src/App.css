@@ -2,7 +2,179 @@
 
 /* src/App.css */
 
-/* src/App.css */
+
+/* --- NUEVOS ESTILOS PARA LA SECCIÓN "QUIEN SOY" (HERO SECTION) --- */
+.hero-section {
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #f8f9fa; /* Color de fondo claro, puedes cambiarlo */
+  color: #212529; /* Color del texto oscuro */
+  position: relative;
+  overflow: hidden; /* Para que el patrón de fondo no se desborde */
+  padding-top: 80px; /* Espacio para el Navbar fijo */
+}
+
+/* Patrón de fondo geométrico (opcional, puedes probar otras texturas SVG o degradados) */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 6v4H0V6h-4V4h4V0h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zM34 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zM16 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zM48 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  opacity: 0.1; /* Sutil */
+  z-index: -1; /* Para que esté detrás del contenido */
+}
+
+.hero-greeting {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  color: #6c757d; /* Un gris más suave */
+}
+
+.hero-name {
+  font-size: 4.5rem; /* Muy grande */
+  font-weight: 700; /* Audaz */
+  color: #212529; /* Color de texto oscuro */
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-transform: uppercase; /* Todo en mayúsculas como en la imagen */
+}
+
+.hero-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #343a40;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #495057;
+  max-width: 700px; /* Limita el ancho para mejor legibilidad */
+  margin: 0 auto 2.5rem auto; /* Centrar y añadir margen inferior */
+}
+
+.hero-cta-button {
+  background-color: #ffc107; /* Amarillo Bootstrap */
+  border-color: #ffc107;
+  color: #212529; /* Texto oscuro en el botón */
+  padding: 0.8rem 2.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-cta-button:hover {
+  background-color: #e0a800; /* Amarillo más oscuro al pasar el ratón */
+  border-color: #e0a800;
+  transform: translateY(-3px); /* Pequeño efecto de elevación */
+}
+
+/* Iconos Sociales Fijos */
+.social-icons-fixed {
+  position: fixed; /* Hace que floten */
+  left: 20px; /* Distancia desde el borde izquierdo */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para centrar */
+  display: flex;
+  flex-direction: column; /* Apilados verticalmente */
+  z-index: 1000; /* Para que estén encima de todo */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  padding: 10px 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons-fixed a {
+  color: #ffffff; /* Iconos blancos */
+  font-size: 1.8rem;
+  margin: 10px 0; /* Espacio entre iconos */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons-fixed a:hover {
+  color: #ffc107; /* Amarillo al pasar el ratón */
+  transform: scale(1.2); /* Efecto de crecimiento */
+}
+
+/* Media Queries para Responsividad (ajustes para pantallas pequeñas) */
+@media (max-width: 992px) {
+  .hero-name {
+    font-size: 3.5rem; /* Más pequeño en tablets */
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .social-icons-fixed {
+    left: 10px;
+    padding: 8px 4px;
+  }
+  .social-icons-fixed a {
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.8rem; /* Aún más pequeño en móviles */
+  }
+  .hero-title {
+    font-size: 1.3rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+    padding: 0 15px; /* Pequeño padding para que no se pegue a los bordes */
+  }
+  .hero-cta-button {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+  }
+  .social-icons-fixed {
+    position: static; /* Quita el fijo en móviles */
+    display: flex;
+    flex-direction: row; /* En línea horizontal al final de la sección */
+    justify-content: center;
+    transform: none;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 20px 0;
+    margin-top: 20px;
+    order: 10; /* Para que aparezca al final de la columna */
+  }
+  .social-icons-fixed a {
+    margin: 0 10px; /* Espacio horizontal */
+  }
+  .hero-section .row {
+    flex-direction: column; /* Apila el texto y los iconos en móviles */
+  }
+}
+
+/* Si usas Animate.css, asegúrate de importarlo en tu index.html o App.jsx */
+/* Por ejemplo, en index.html, dentro de <head>: */
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .social-icons-hero {
   /* Espacio arriba, para separarlo del texto */
   margin-top: 30px; 
