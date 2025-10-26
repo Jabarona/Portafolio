@@ -19,7 +19,7 @@ import { SiPostgresql, SiMongodb, SiNodedotjs, SiExpress, SiPython, SiDjango, Si
 import { FaLinkedin, FaInstagram, FaGithub, FaExternalLinkAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 
-// Este es tu nuevo Navbar, puedes llamarlo MainNavbar si quieres
+
 function MainNavbar() {
   return (
     // 'sticky="top"' es un buen agregado, hace que se quede pegado arriba al hacer scroll
@@ -88,10 +88,9 @@ function App() {
     setShowModal(true);
   };
 
+
   
-  // --- 4. FUNCIONES PARA EL FORMULARIO DE CONTACTO (EL CÓDIGO QUE FALTABA) ---
-  
-  // 4a. Actualiza el estado cada vez que el usuario teclea
+  //  Actualiza el estado cada vez que el usuario teclea
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -106,7 +105,7 @@ function App() {
     setFormStatus('Enviando...');
 
     try {
-      // ¡¡RECUERDA REEMPLAZAR ESTO CON TU URL REAL DE FIREBASE!!
+      //  URL REAL DE FIREBASE!!
       const functionURL = 'https://us-central1-portafolio-jb-54d0d.cloudfunctions.net/enviarMensaje'; 
       
       const response = await fetch(functionURL, {
@@ -169,7 +168,7 @@ function App() {
 
             <Col md={5} lg={4} className="text-center hero-image-col">
               <Image 
-                src="/tu-foto-sin-fondo.png" // <-- ¡RECUERDA CAMBIAR ESTO!
+                src="/" // <-- ¡RECUERDA CAMBIAR ESTO!
                 fluid
                 alt="Mi foto de perfil"
               />
