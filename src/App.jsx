@@ -14,8 +14,9 @@ import Modal from 'react-bootstrap/Modal';
 
 import './App.css';
 import { DiPython, DiReact, DiJsBadge, DiDatabase, DiHtml5, DiCss3 } from "react-icons/di";
-import { SiPostgresql, SiMongodb, SiNodedotjs, SiExpress, SiPython, SiDjango, SiReact as SiReactProject, SiJavascript } from 'react-icons/si'; 
-import { FaLinkedin, FaInstagram, FaGithub, FaExternalLinkAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { SiPostgresql, SiMongodb, SiNodedotjs, SiExpress, SiPython, SiDjango, SiReact as SiReactProject, SiJavascript , SiDocker,SiGodotengine } from 'react-icons/si'; 
+import { FaLinkedin, FaInstagram, FaGithub, FaExternalLinkAlt, FaWhatsapp, FaEnvelope,FaAws } from "react-icons/fa";
+
 
 
 
@@ -166,7 +167,7 @@ function App() {
       <FaInstagram />
     </a>
   </div>
-  
+
     </Col>
   </Row>
 </Container>
@@ -185,29 +186,57 @@ function App() {
               </Col>
             </Row>
             <Row className="justify-content-center mt-4">
-              <Col xs={6} md={3} lg={2} className="skill-icon-container">
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
                 <DiPython className="skill-icon icon-python" />
                 <p>Python</p>
               </Col>
-              <Col xs={6} md={3} lg={2} className="skill-icon-container">
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
                 <DiJsBadge className="skill-icon icon-js" />
                 <p>JavaScript</p>
               </Col>
-              <Col xs={6} md={3} lg={2} className="skill-icon-container">
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
                 <DiReact className="skill-icon icon-react" />
                 <p>React</p>
               </Col>
-              <Col xs={6} md={3} lg={2} className="skill-icon-container">
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
                 <DiDatabase className="skill-icon icon-sql" />
                 <p>SQL</p>
               </Col>
-              <Col xs={6} md={3} lg={2} className="skill-icon-container">
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
                 <DiHtml5 className="skill-icon icon-html" />
                 <p>HTML5</p>
               </Col>
-              <Col xs={6} md={3} lg={2} className="skill-icon-container">
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
                 <DiCss3 className="skill-icon icon-css" />
                 <p>CSS3</p>
+              </Col>
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
+                <SiDjango className="skill-icon icon-django" /> {/* Necesitarás un CSS para icon-django */}
+                <p>Django</p>
+              </Col>
+
+              {/* Icono 8: Godot */}
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
+                <SiGodotengine className="skill-icon icon-godot" /> {/* Necesitarás un CSS para icon-godot */}
+                <p>Godot</p>
+              </Col>
+
+              {/* Icono 9: AWS */}
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
+                <FaAws className="skill-icon icon-aws" /> {/* Necesitarás un CSS para icon-aws */}
+                <p>AWS</p>
+              </Col>
+
+              {/* Icono 10: PostgreSQL */}
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
+                <SiPostgresql className="skill-icon icon-postgresql" /> {/* Necesitarás un CSS para icon-postgresql */}
+                <p>PostgreSQL</p>
+              </Col>
+
+              {/* Icono 11: Docker */}
+              <Col xs={3} md={3} xl={2} className="skill-icon-container">
+                <SiDocker className="skill-icon icon-docker" /> {/* Necesitarás un CSS para icon-docker */}
+                <p>Docker</p>
               </Col>
             </Row>
           </Container>

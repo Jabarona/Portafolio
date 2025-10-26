@@ -89,6 +89,13 @@
 .icon-sql { color: #f29111 !important; } /* Naranja genérico para SQL */
 .icon-html { color: #E34F26 !important; }
 .icon-css { color: #1572B6 !important; }
+
+.icon-django { color: #092E20; } /* Verde oscuro Django */
+.icon-godot { color: #478CBF; } /* Azul Godot */
+.icon-aws { color: #FF9900; } /* Naranja AWS */
+.icon-postgresql { color: #336791; } /* Azul PostgreSQL */
+.icon-docker { color: #2496ED; } /* Azul Docker */
+
 /* ------------------------------------------- */
 
 /* --- Estilos Sección Proyectos --- */
@@ -190,7 +197,7 @@
   }
   .social-icons-fixed a:hover {
      color: #F7DF1E !important; /* Amarillo hover */
-     transform: none;
+    transform: none;
   }
 
   /* Ajustes Proyectos */
