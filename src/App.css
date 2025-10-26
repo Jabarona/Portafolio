@@ -1,0 +1,319 @@
+
+
+/* src/App.css */
+
+/* src/App.css */
+.social-icons-hero {
+  /* Espacio arriba, para separarlo del texto */
+  margin-top: 30px; 
+}
+
+.social-icons-hero a {
+  /* Tamaño del icono */
+  font-size: 2rem; 
+  
+  /* Color blanco (heredado) */
+  color: white; 
+  
+  /* Espacio entre iconos */
+  margin-right: 20px; 
+  
+  /* Transición suave para el hover */
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover: cambia el color (puedes usar el amarillo) */
+.social-icons-hero a:hover {
+  color: #F7DF1E; /* Amarillo */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  /* ¡Borramos el 'transform' de aquí para que el h1 se quede quieto! */
+}
+
+
+/* En pantallas pequeñas (móviles), desactivamos este 
+   movimiento para que el diseño no se rompa */
+@media (max-width: 767px) {
+  .hero-image-col {
+    transform: none; /* Resetea la posición en móviles */
+  }
+  .hero-text h1,
+  .hero-text p {
+    transform: none;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
+
+.hero-text h1 {
+  font-size: 5rem; 
+  font-weight: 700; 
+  line-height: 1.1;
+  margin-bottom: 20px;
+
+}
+
+
+.hero-text .lead {
+  font-size: 1.5rem; /* Hacemos el subtítulo un poco más grande */
+  font-weight: 300; /* Letra más fina */
+}
+
+.App-wrapper {
+  background-color: #343a40;
+  color: white;
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura */
+}
+
+
+
+/* Contenedor para la sección de habilidades */
+.skills-section {
+  /* Le damos un fondo ligeramente diferente para separarla */
+  background-color: #212529; /* Un gris oscuro de Bootstrap */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Estilo para cada icono individual */
+.skill-icon-container {
+  text-align: center;
+  padding: 25px;
+  /* Le decimos que crezca suavemente */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* El efecto "hover" que querías */
+.skill-icon-container:hover {
+  /* Crece un 10% */
+  transform: scale(1.1); 
+}
+
+/* El icono (SVG) */
+.skill-icon {
+  font-size: 5rem; /* 5 veces el tamaño de letra normal = icono grande */
+  margin-bottom: 15px;
+  color: #0d6efd; /* Un color azul para los iconos */
+}
+
+/* El texto debajo del icono */
+.skill-icon-container p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Cambiamos el color de algunos iconos para que tengan su color de marca */
+.icon-react { color: #61DAFB; }
+.icon-python { color: #3776AB; }
+.icon-js { color: #F7DF1E; }
+.icon-sql { color: #f29111; } /* Naranja genérico para SQL */
+.icon-html { color: #E34F26; }
+.icon-css { color: #1572B6; }
+
+/* Para que la imagen se ajuste bien */
+.project-card .card-img-top {
+  height: 200px; /* Altura fija para la imagen */
+  object-fit: cover; /* Recorta la imagen para que quepa */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Asegura que los botones siempre queden abajo */
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* src/App.css */
+
+/* ... (Todos tus estilos anteriores para Wrapper, Hero, Skills, etc.) ... */
+
+
+/* --- Estilos para la Sección de Proyectos --- */
+.projects-section {
+  background-color: #343a40; /* Fondo sutilmente diferente */
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.project-card {
+  background-color: #212529; /* Fondo oscuro para la tarjeta */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  height: 100%; /* Para que todas las tarjetas midan lo mismo */
+
+  /* --- AJUSTES DE ZOOM --- */
+  position: relative; /* Necesario para que z-index funcione */
+  z-index: 1; /* Nivel de apilamiento normal */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+  overflow: hidden;
+  
+  /* --- CLAVE PARA EL ZOOM: Transición suave --- */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  
+  /* Asegura que el contenido no se salga al hacer zoom */
+  overflow: hidden; 
+}
+
+.project-card:hover {
+  /* --- CONTROL DEL TAMAÑO DEL ZOOM --- */
+  /* 'scale(1.03)' agranda la tarjeta un 3%.
+    Si quieres más zoom, usa un número más grande, ej. 'scale(1.05)' para 5%.
+    Si quieres menos zoom, usa un número más pequeño, ej. 'scale(1.01)' para 1%. */
+  transform: scale(1.10);
+  
+  /* --- ARREGLO DE SUPERPOSICIÓN --- */
+  z-index: 10; /* Se pone "encima" de las otras tarjetas */
+  
+  /* Opcional: una sombra más pronunciada al hacer hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Para que la imagen se ajuste bien */
+.project-card .card-img-top {
+  height: 200px; /* Altura fija para la imagen */
+  object-fit: cover; /* Recorta la imagen para que quepa */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Asegura que los botones siempre queden abajo */
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ajustes para los botones dentro de la tarjeta */
+.project-card .btn {
+    font-size: 0.9rem; /* Un poco más pequeños si es necesario */
+    padding: 0.5rem 0.8rem;
+}
+
+
+/* --- Responsive para Móvil --- */
+@media (max-width: 767px) {
+  /* En móviles, desactivamos el zoom para evitar problemas de layout */
+  .project-card:hover {
+    transform: none; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Mantenemos la sombra normal */
+  }
+
+  /* Ajusta el tamaño del título de los proyectos si es necesario en móvil */
+  .projects-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* src/App.css */
+
+/* ... (Todos tus estilos anteriores) ... */
+
+
+/* --- Estilos para la Sección de Contacto --- */
+.contact-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* (La dejamos con el fondo principal de .App-wrapper) */
+}
+
+.contact-section h2 {
+  margin-bottom: 40px; /* Espacio después del título principal */
+}
+
+/* Estilos para el formulario en modo oscuro */
+.contact-form .form-control {
+  background-color: #343a40; /* Fondo gris oscuro para el input */
+  color: white; /* Texto blanco */
+  border: 1px solid #555; /* Borde sutil */
+}
+
+.contact-form .form-control::placeholder {
+  color: #aaa; /* Color del texto de ejemplo */
+}
+
+/* Arreglo para que el 'autocompletar' de Chrome no ponga fondo blanco */
+.contact-form .form-control:-webkit-autofill,
+.contact-form .form-control:-webkit-autofill:hover, 
+.contact-form .form-control:-webkit-autofill:focus, 
+.contact-form .form-control:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #343a40 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+.contact-form .btn-primary {
+  background-color: #F7DF1E; /* Botón de enviar amarillo */
+  border-color: #F7DF1E;
+  color: #212529; /* Texto oscuro para el botón amarillo */
+  font-weight: bold;
+}
+
+/* Estilos para la columna de "Contacto Rápido" */
+.contact-info-box {
+  background-color: #343a40; /* Fondo de bloque sutil */
+  padding: 30px;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.contact-info-box h4 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.contact-info-box p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.contact-info-box .icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #F7DF1E; /* Iconos amarillos */
+}
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+  background-color: #25D366; /* Color oficial de WhatsApp */
+  border-color: #25D366;
+  color: white ;
+  font-weight: bold;
+}
+.btn-whatsapp:hover {
+  background-color: #1DA851;
+  border-color: #1DA851;
+  color: white !important ;
+}
+
+
+
+
+
+
+/* --- Estilos para el Footer Simple --- */
+.simple-footer {
+  /* Un fondo oscuro, pero sutilmente diferente al principal */
+  background-color: #1a1e21; 
+
+  /* Letra de color gris claro, no blanco brillante */
+  color: rgba(255, 255, 255, 0.5); 
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 60px; /* Un espacio grande para separarlo de la última sección */
+}
+
+.simple-footer p {
+  margin: 0; /* Quita el margen por defecto del párrafo */
+  font-size: 0.9rem; /* Letra un poco más pequeña */
+}
