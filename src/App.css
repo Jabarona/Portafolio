@@ -1,491 +1,174 @@
-
-
 /* src/App.css */
 
-
-/* --- NUEVOS ESTILOS PARA LA SECCIÓN "QUIEN SOY" (HERO SECTION) --- */
-.hero-section {
-  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
-  background-color: #f8f9fa; /* Color de fondo claro, puedes cambiarlo */
-  color: #212529; /* Color del texto oscuro */
-  position: relative;
-  overflow: hidden; /* Para que el patrón de fondo no se desborde */
-  padding-top: 80px; /* Espacio para el Navbar fijo */
+/* --- Estilos Globales / Wrapper --- */
+.App-wrapper {
+  background-color: #212529;
+  color: #f8f9fa;
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura */
+  overflow-x: hidden; /* Evita scroll horizontal */
+  /* El fondo se define por sección ahora */
 }
 
-/* Patrón de fondo geométrico (opcional, puedes probar otras texturas SVG o degradados) */
+/* --- Estilos para la Sección "Quién Soy" (Hero Section) --- */
+.hero-section {
+  min-height: 100vh;
+  background-color: #212529; /* FONDO CLARO COMO EN TU IMAGEN */
+  color: #f8f9fa; /* TEXTO OSCURO */
+  position: relative;
+  overflow: hidden;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centra todo el texto por defecto */
+}
+
+/* Patrón sutil (opcional) */
 .hero-section::before {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 6v4H0V6h-4V4h4V0h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zM34 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zM16 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zM48 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23343a40' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 6v4H0V6h-4V4h4V0h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zm0 14v4H0v-4h-4v-2h4v-4h2v4h4v2H2zM34 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zM16 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zM48 2v4h2v-4h4v-2h-4V0h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4zm0 14v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-size: 60px 60px;
-  opacity: 0.1; /* Sutil */
-  z-index: -1; /* Para que esté detrás del contenido */
+  opacity: 0.1;
+  z-index: 0;
+}
+.hero-section > .container > .row { /* Aplica solo a la fila principal */
+  position: relative;
+  z-index: 1;
 }
 
 .hero-greeting {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
-  color: #6c757d; /* Un gris más suave */
+  font-size: 1.5rem; font-weight: 500; margin-bottom: 0.5rem; letter-spacing: 2px;
+  color: #adb5bd;
 }
-
 .hero-name {
-  font-size: 4.5rem; /* Muy grande */
-  font-weight: 700; /* Audaz */
-  color: #212529; /* Color de texto oscuro */
-  margin-bottom: 1rem;
-  line-height: 1.1;
-  text-transform: uppercase; /* Todo en mayúsculas como en la imagen */
+  font-size: 4.5rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem; line-height: 1.1; text-transform: uppercase;
 }
-
 .hero-title {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #343a40;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem; font-weight: 400; color: #e9ecef; margin-bottom: 1.5rem;
 }
-
 .hero-description {
-  font-size: 1.1rem;
-  color: #495057;
-  max-width: 700px; /* Limita el ancho para mejor legibilidad */
-  margin: 0 auto 2.5rem auto; /* Centrar y añadir margen inferior */
+  font-size: 1.1rem; color: #ced4da; max-width: 700px; margin: 0 auto 2.5rem auto;
 }
-
 .hero-cta-button {
-  background-color: #ffc107; /* Amarillo Bootstrap */
-  border-color: #ffc107;
-  color: #212529; /* Texto oscuro en el botón */
-  padding: 0.8rem 2.5rem;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  background-color: #ffc107; border-color: #ffc107; color: #212529;
+  padding: 0.8rem 2.5rem; border-radius: 5px; font-size: 1.2rem; font-weight: 600; transition: all 0.3s ease;
 }
-
 .hero-cta-button:hover {
-  background-color: #e0a800; /* Amarillo más oscuro al pasar el ratón */
-  border-color: #e0a800;
-  transform: translateY(-3px); /* Pequeño efecto de elevación */
+  background-color: #e0a800; border-color: #e0a800; transform: translateY(-3px);
 }
 
-/* Iconos Sociales Fijos */
+/* Iconos Sociales Fijos (Solo Escritorio) */
 .social-icons-fixed {
-  position: fixed; /* Hace que floten */
-  left: 20px; /* Distancia desde el borde izquierdo */
-  top: 50%; /* Centrado verticalmente */
-  transform: translateY(-50%); /* Ajuste fino para centrar */
-  display: flex;
-  flex-direction: column; /* Apilados verticalmente */
-  z-index: 1000; /* Para que estén encima de todo */
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-  padding: 10px 5px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; left: 20px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; z-index: 1000;
+  background-color: rgba(33, 37, 41, 0.7); padding: 10px 5px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .social-icons-fixed a {
-  color: #ffffff; /* Iconos blancos */
-  font-size: 1.8rem;
-  margin: 10px 0; /* Espacio entre iconos */
-  transition: color 0.3s ease, transform 0.3s ease;
+  color: #ffffff; font-size: 1.8rem; margin: 10px 0; transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .social-icons-fixed a:hover {
-  color: #ffc107; /* Amarillo al pasar el ratón */
-  transform: scale(1.2); /* Efecto de crecimiento */
+  color: #ffc107; transform: scale(1.2);
 }
 
-/* Media Queries para Responsividad (ajustes para pantallas pequeñas) */
-@media (max-width: 992px) {
-  .hero-name {
-    font-size: 3.5rem; /* Más pequeño en tablets */
-  }
-  .hero-title {
-    font-size: 1.5rem;
-  }
-  .social-icons-fixed {
-    left: 10px;
-    padding: 8px 4px;
-  }
-  .social-icons-fixed a {
-    font-size: 1.5rem;
-    margin: 8px 0;
-  }
-}
+/* --- Estilos Sección Habilidades --- */
+.skills-section { background-color: #343a40; padding-top: 60px; padding-bottom: 60px; color: #f8f9fa; }
+.skill-icon-container { text-align: center; padding: 25px; transition: transform 0.2s ease-in-out; }
+.skill-icon-container:hover { transform: scale(1.1); }
+.skill-icon { font-size: 5rem; margin-bottom: 15px; }
+.skill-icon-container p { font-size: 1.1rem; font-weight: bold; margin: 0; }
+.icon-react { color: #61DAFB; } .icon-python { color: #3776AB; } .icon-js { color: #F7DF1E; }
+.icon-sql { color: #f29111; } .icon-html { color: #E34F26; } .icon-css { color: #1572B6; }
+.skill-icon { color: #0d6efd; } /* Color por defecto */
 
-@media (max-width: 768px) {
-  .hero-name {
-    font-size: 2.8rem; /* Aún más pequeño en móviles */
-  }
-  .hero-title {
-    font-size: 1.3rem;
-  }
-  .hero-description {
-    font-size: 1rem;
-    padding: 0 15px; /* Pequeño padding para que no se pegue a los bordes */
-  }
-  .hero-cta-button {
-    padding: 0.6rem 2rem;
-    font-size: 1rem;
-  }
-  .social-icons-fixed {
-    position: static; /* Quita el fijo en móviles */
-    display: flex;
-    flex-direction: row; /* En línea horizontal al final de la sección */
-    justify-content: center;
-    transform: none;
-    background-color: transparent;
-    box-shadow: none;
-    padding: 20px 0;
-    margin-top: 20px;
-    order: 10; /* Para que aparezca al final de la columna */
-  }
-  .social-icons-fixed a {
-    margin: 0 10px; /* Espacio horizontal */
-  }
-  .hero-section .row {
-    flex-direction: column; /* Apila el texto y los iconos en móviles */
-  }
-}
+/*  COLORES ICONOS HABILIADES ! --- */
+.icon-react { color: #61DAFB !important; }
+.icon-python { color: #3776AB !important; }
+.icon-js { color: #F7DF1E !important; }
+.icon-sql { color: #f29111 !important; } /* Naranja genérico para SQL */
+.icon-html { color: #E34F26 !important; }
+.icon-css { color: #1572B6 !important; }
+/* ------------------------------------------- */
 
-/* Si usas Animate.css, asegúrate de importarlo en tu index.html o App.jsx */
-/* Por ejemplo, en index.html, dentro de <head>: */
-/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.social-icons-hero {
-  /* Espacio arriba, para separarlo del texto */
-  margin-top: 30px; 
-}
-
-.social-icons-hero a {
-  /* Tamaño del icono */
-  font-size: 2rem; 
-  
-  /* Color blanco (heredado) */
-  color: white; 
-  
-  /* Espacio entre iconos */
-  margin-right: 20px; 
-  
-  /* Transición suave para el hover */
-  transition: color 0.3s ease;
-}
-
-/* Efecto hover: cambia el color (puedes usar el amarillo) */
-.social-icons-hero a:hover {
-  color: #F7DF1E; /* Amarillo */
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-  /* ¡Borramos el 'transform' de aquí para que el h1 se quede quieto! */
-}
-
-
-/* En pantallas pequeñas (móviles), desactivamos este 
-   movimiento para que el diseño no se rompa */
-@media (max-width: 767px) {
-  .hero-image-col {
-    transform: none; /* Resetea la posición en móviles */
-  }
-  .hero-text h1,
-  .hero-text p {
-    transform: none;
-  }
-  .hero-text {
-    text-align: center;
-  }
-}
-
-.hero-text h1 {
-  font-size: 5rem; 
-  font-weight: 700; 
-  line-height: 1.1;
-  margin-bottom: 20px;
-
-}
-
-
-.hero-text .lead {
-  font-size: 1.5rem; /* Hacemos el subtítulo un poco más grande */
-  font-weight: 300; /* Letra más fina */
-}
-
-.App-wrapper {
-  background-color: #343a40;
-  color: white;
-  min-height: 100vh; /* Asegura que el fondo cubra toda la altura */
-}
-
-
-
-/* Contenedor para la sección de habilidades */
-.skills-section {
-  /* Le damos un fondo ligeramente diferente para separarla */
-  background-color: #212529; /* Un gris oscuro de Bootstrap */
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-/* Estilo para cada icono individual */
-.skill-icon-container {
-  text-align: center;
-  padding: 25px;
-  /* Le decimos que crezca suavemente */
-  transition: transform 0.2s ease-in-out;
-}
-
-/* El efecto "hover" que querías */
-.skill-icon-container:hover {
-  /* Crece un 10% */
-  transform: scale(1.1); 
-}
-
-/* El icono (SVG) */
-.skill-icon {
-  font-size: 5rem; /* 5 veces el tamaño de letra normal = icono grande */
-  margin-bottom: 15px;
-  color: #0d6efd; /* Un color azul para los iconos */
-}
-
-/* El texto debajo del icono */
-.skill-icon-container p {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Cambiamos el color de algunos iconos para que tengan su color de marca */
-.icon-react { color: #61DAFB; }
-.icon-python { color: #3776AB; }
-.icon-js { color: #F7DF1E; }
-.icon-sql { color: #f29111; } /* Naranja genérico para SQL */
-.icon-html { color: #E34F26; }
-.icon-css { color: #1572B6; }
-
-/* Para que la imagen se ajuste bien */
-.project-card .card-img-top {
-  height: 200px; /* Altura fija para la imagen */
-  object-fit: cover; /* Recorta la imagen para que quepa */
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-/* Asegura que los botones siempre queden abajo */
-.project-card .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-/* src/App.css */
-
-/* ... (Todos tus estilos anteriores para Wrapper, Hero, Skills, etc.) ... */
-
-
-/* --- Estilos para la Sección de Proyectos --- */
-.projects-section {
-  background-color: #343a40; /* Fondo sutilmente diferente */
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
+/* --- Estilos Sección Proyectos --- */
+.projects-section { background-color: #212529; padding-top: 60px; padding-bottom: 60px; color: #f8f9fa; }
 .project-card {
-  background-color: #212529; /* Fondo oscuro para la tarjeta */
-  color: white;
-  border: none;
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra sutil */
-  height: 100%; /* Para que todas las tarjetas midan lo mismo */
-
-  /* --- AJUSTES DE ZOOM --- */
-  position: relative; /* Necesario para que z-index funcione */
-  z-index: 1; /* Nivel de apilamiento normal */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
-  overflow: hidden;
-  
-  /* --- CLAVE PARA EL ZOOM: Transición suave --- */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-  
-  /* Asegura que el contenido no se salga al hacer zoom */
-  overflow: hidden; 
+  background-color: #343a40; color: white; border: none; border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); height: 100%; position: relative; z-index: 1;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; overflow: hidden;
 }
+.project-card:hover { transform: scale(1.01); z-index: 10; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); }
+.project-card .card-img-top { height: 200px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+.project-card .card-body { display: flex; flex-direction: column; justify-content: space-between; }
+.project-card .btn { font-size: 0.9rem; padding: 0.5rem 0.8rem; }
 
-.project-card:hover {
-  /* --- CONTROL DEL TAMAÑO DEL ZOOM --- */
-  /* 'scale(1.03)' agranda la tarjeta un 3%.
-    Si quieres más zoom, usa un número más grande, ej. 'scale(1.05)' para 5%.
-    Si quieres menos zoom, usa un número más pequeño, ej. 'scale(1.01)' para 1%. */
-  transform: scale(1.10);
-  
-  /* --- ARREGLO DE SUPERPOSICIÓN --- */
-  z-index: 10; /* Se pone "encima" de las otras tarjetas */
-  
-  /* Opcional: una sombra más pronunciada al hacer hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Para que la imagen se ajuste bien */
-.project-card .card-img-top {
-  height: 200px; /* Altura fija para la imagen */
-  object-fit: cover; /* Recorta la imagen para que quepa */
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-/* Asegura que los botones siempre queden abajo */
-.project-card .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Ajustes para los botones dentro de la tarjeta */
-.project-card .btn {
-    font-size: 0.9rem; /* Un poco más pequeños si es necesario */
-    padding: 0.5rem 0.8rem;
-}
-
-
-/* --- Responsive para Móvil --- */
-@media (max-width: 767px) {
-  /* En móviles, desactivamos el zoom para evitar problemas de layout */
-  .project-card:hover {
-    transform: none; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Mantenemos la sombra normal */
-  }
-
-  /* Ajusta el tamaño del título de los proyectos si es necesario en móvil */
-  .projects-section h2 {
-    font-size: 2.5rem;
-  }
-}
-
-/* src/App.css */
-
-/* ... (Todos tus estilos anteriores) ... */
-
-
-/* --- Estilos para la Sección de Contacto --- */
-.contact-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  /* (La dejamos con el fondo principal de .App-wrapper) */
-}
-
-.contact-section h2 {
-  margin-bottom: 40px; /* Espacio después del título principal */
-}
-
-/* Estilos para el formulario en modo oscuro */
-.contact-form .form-control {
-  background-color: #343a40; /* Fondo gris oscuro para el input */
-  color: white; /* Texto blanco */
-  border: 1px solid #555; /* Borde sutil */
-}
-
-.contact-form .form-control::placeholder {
-  color: #aaa; /* Color del texto de ejemplo */
-}
-
-/* Arreglo para que el 'autocompletar' de Chrome no ponga fondo blanco */
+/* --- Estilos Sección Contacto --- */
+.contact-section { background-color: #343a40; padding-top: 60px; padding-bottom: 60px; color: #f8f9fa; }
+.contact-section h2, .contact-section .lead { color: #f8f9fa; }
+.contact-section h2 { margin-bottom: 40px; }
+.contact-form .form-label { color: #f8f9fa; }
+.contact-form .form-control { background-color: #212529; color: white; border: 1px solid #495057; }
+.contact-form .form-control::placeholder { color: #6c757d; }
 .contact-form .form-control:-webkit-autofill,
-.contact-form .form-control:-webkit-autofill:hover, 
-.contact-form .form-control:-webkit-autofill:focus, 
+.contact-form .form-control:-webkit-autofill:hover,
+.contact-form .form-control:-webkit-autofill:focus,
 .contact-form .form-control:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px #343a40 inset !important;
-    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0 30px #212529 inset !important; -webkit-text-fill-color: white !important;
+}
+.contact-form .btn-primary { background-color: #F7DF1E; border-color: #F7DF1E; color: #212529; font-weight: bold; }
+.contact-form .btn-primary:hover { background-color: #e0c000; border-color: #e0c000; }
+.contact-info-box { background-color: #212529; padding: 30px; border-radius: 8px; height: 100%; }
+.contact-info-box h4 { color: white; margin-bottom: 20px; }
+.contact-info-box p { font-size: 1.1rem; color: #ced4da; margin-bottom: 25px; }
+.contact-info-box .icon { font-size: 1.2rem; margin-right: 10px; color: #F7DF1E; }
+.btn-whatsapp { background-color: #25D366; border-color: #25D366; color: white !important; font-weight: bold; }
+.btn-whatsapp:hover { background-color: #1DA851; border-color: #1DA851; color: white !important; }
+
+/* --- Estilos Footer --- */
+.simple-footer { background-color: #1a1e21; color: rgba(255, 255, 255, 0.5); padding-top: 30px; padding-bottom: 30px; margin-top: 0; }
+.simple-footer p { margin: 0; font-size: 0.9rem; }
+
+/* =========================================== */
+/* === Media Queries (Ajustes para Móvil) === */
+/* =========================================== */
+
+/* --- Tablets (max-width: 992px) --- */
+@media (max-width: 992px) {
+  .hero-name { font-size: 3.5rem; }
+  .hero-title { font-size: 1.5rem; }
+  .social-icons-fixed { left: 10px; padding: 8px 4px; }
+  .social-icons-fixed a { font-size: 1.5rem; margin: 8px 0; }
 }
 
-.contact-form .btn-primary {
-  background-color: #F7DF1E; /* Botón de enviar amarillo */
-  border-color: #F7DF1E;
-  color: #212529; /* Texto oscuro para el botón amarillo */
-  font-weight: bold;
-}
+/* --- Móviles (max-width: 768px) --- */
+@media (max-width: 768px) {
 
-/* Estilos para la columna de "Contacto Rápido" */
-.contact-info-box {
-  background-color: #343a40; /* Fondo de bloque sutil */
-  padding: 30px;
-  border-radius: 8px;
-  height: 100%;
-}
+  /* Ajustes Hero Section */
+  .hero-section { display: block; padding-top: 60px; padding-bottom: 40px; min-height: auto; }
+  .hero-name { font-size: 2.8rem; }
+  .hero-title { font-size: 1.3rem; }
+  .hero-description { font-size: 1rem; padding: 0 15px; }
+  .hero-cta-button { padding: 0.6rem 2rem; font-size: 1rem; }
 
-.contact-info-box h4 {
-  color: white;
-  margin-bottom: 20px;
-}
+  /* Iconos Sociales en Móvil */
+  .social-icons-fixed {
+    position: static !important; display: flex !important; flex-direction: row !important;
+    justify-content: center !important; align-items: center; transform: none !important;
+    background-color: transparent !important; box-shadow: none !important;
+    padding: 20px 0 !important; margin-top: 30px !important; width: 100% !important;
+  }
+  .social-icons-fixed a {
+    margin: 0 15px !important;
+    color: #212529 !important; /* Color oscuro para fondo claro */
+    font-size: 1.8rem;
+  }
+  .social-icons-fixed a:hover {
+     color: #0d6efd !important; /* Azul Bootstrap */
+     transform: none;
+  }
 
-.contact-info-box p {
-  font-size: 1.1rem;
-  color: #ddd;
-  margin-bottom: 25px;
-}
-
-.contact-info-box .icon {
-  font-size: 1.2rem;
-  margin-right: 10px;
-  color: #F7DF1E; /* Iconos amarillos */
-}
-
-/* Botón de WhatsApp */
-.btn-whatsapp {
-  background-color: #25D366; /* Color oficial de WhatsApp */
-  border-color: #25D366;
-  color: white ;
-  font-weight: bold;
-}
-.btn-whatsapp:hover {
-  background-color: #1DA851;
-  border-color: #1DA851;
-  color: white !important ;
-}
-
-
-
-
-
-
-/* --- Estilos para el Footer Simple --- */
-.simple-footer {
-  /* Un fondo oscuro, pero sutilmente diferente al principal */
-  background-color: #1a1e21; 
-
-  /* Letra de color gris claro, no blanco brillante */
-  color: rgba(255, 255, 255, 0.5); 
-
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-top: 60px; /* Un espacio grande para separarlo de la última sección */
-}
-
-.simple-footer p {
-  margin: 0; /* Quita el margen por defecto del párrafo */
-  font-size: 0.9rem; /* Letra un poco más pequeña */
+  /* Ajustes Proyectos */
+  .project-card:hover { transform: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+  .projects-section h2 { font-size: 2.5rem; }
 }
