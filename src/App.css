@@ -73,7 +73,7 @@
 }
 
 /* --- Estilos Sección Habilidades --- */
-.skills-section { background-color: #343a40; padding-top: 60px; padding-bottom: 60px; color: #f8f9fa; }
+.skills-section { background-color: #212529; padding-top: 60px; padding-bottom: 60px; color: #f8f9fa; }
 .skill-icon-container { text-align: center; padding: 25px; transition: transform 0.2s ease-in-out; }
 .skill-icon-container:hover { transform: scale(1.1); }
 .skill-icon { font-size: 5rem; margin-bottom: 15px; }
@@ -126,7 +126,7 @@
 .btn-whatsapp:hover { background-color: #1DA851; border-color: #1DA851; color: white !important; }
 
 /* --- Estilos Footer --- */
-.simple-footer { background-color: #1a1e21; color: rgba(255, 255, 255, 0.5); padding-top: 30px; padding-bottom: 30px; margin-top: 0; }
+.simple-footer { background-color: #212529; color: rgba(255, 255, 255, 0.5); padding-top: 30px; padding-bottom: 30px; margin-top: 0; }
 .simple-footer p { margin: 0; font-size: 0.9rem; }
 
 /* =========================================== */
@@ -160,11 +160,11 @@
   }
   .social-icons-fixed a {
     margin: 0 15px !important;
-    color: #212529 !important; /* Color oscuro para fondo claro */
+    color: #f8f9fa !important; /* Color oscuro para fondo claro */
     font-size: 1.8rem;
   }
   .social-icons-fixed a:hover {
-     color: #0d6efd !important; /* Azul Bootstrap */
+     color: #F7DF1E !important; /* Azul Bootstrap */
      transform: none;
   }
 

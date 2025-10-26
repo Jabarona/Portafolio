@@ -148,7 +148,7 @@ function App() {
         Apasionado por el desarrollo web y la creación de soluciones innovadoras que impactan positivamente.
       </p>
       <Button 
-        variant="outline-dark" 
+        variant="outline-warning" 
         size="lg" 
         href="#proyectos" 
         className="hero-cta-button animate__animated animate__zoomIn"
@@ -390,7 +390,7 @@ function App() {
                     onChange={handleFormChange}
                   />
                 </Form.Group>
-                <Button variant="primary" type="submit" disabled={formStatus === 'Enviando...'}>
+                <Button variant="outline-warning" type="submit" disabled={formStatus === 'Enviando...'}>
                   {formStatus || 'Enviar Mensaje'}
                 </Button>
                 {formStatus === '¡Mensaje enviado!' && <p className="text-success mt-2">{formStatus}</p>}
