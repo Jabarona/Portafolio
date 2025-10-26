@@ -99,16 +99,62 @@
 /* ------------------------------------------- */
 
 /* --- Estilos Sección Proyectos --- */
-.projects-section { background-color: #212529; padding-top: 60px; padding-bottom: 60px; color: #f8f9fa; }
+.projects-section { background-color: #212529 ; 
+  padding-top: 60px; 
+  padding-bottom: 60px; 
+  color: #f8f9fa; }
+
 .project-card {
-  background-color: #343a40; color: white; border: none; border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); height: 100%; position: relative; z-index: 1;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; overflow: hidden;
+  background-color: #343a40 !important;
+  color: #f8f9fa !important;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  height: 100%; /* <<-- ESTO ESTÁ BIEN, LO MANTENEMOS */
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  overflow: hidden;
+  display: flex; /* <<-- AÑADIDO: Hace la tarjeta un contenedor flex */
+  flex-direction: column; /* <<-- AÑADIDO: Apila imagen y cuerpo */
 }
-.project-card:hover { transform: scale(1.01); z-index: 10; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); }
-.project-card .card-img-top { height: 200px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px; }
-.project-card .card-body { display: flex; flex-direction: column; justify-content: space-between; }
-.project-card .btn { font-size: 0.9rem; padding: 0.5rem 0.8rem; }
+
+.project-card:hover {
+  transform: scale(1.01);
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  flex-shrink: 0; /* <<-- AÑADIDO: Evita que la imagen se encoja */
+}
+
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* <<-- CAMBIO CLAVE: Permite que el cuerpo crezca */
+  padding: 1rem; /* Asegúrate de que tenga padding */
+  /* Quitamos justify-content: space-between; si estaba */
+}
+
+/* --- AÑADE ESTA NUEVA REGLA --- */
+/* Empuja el div de los botones al final del card-body */
+.project-card .card-body > div:last-child {
+  margin-top: auto; /* Empuja hacia abajo */
+  padding-top: 1rem; /* Espacio sobre los botones */
+}
+/* --- FIN NUEVA REGLA --- */
+
+.project-card .btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+}
+
+
 
 /* --- Estilos Sección Contacto --- */
 .contact-section { background-color: #343a40; padding-top: 60px; padding-bottom: 60px; color: #f8f9fa; }

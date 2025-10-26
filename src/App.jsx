@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
@@ -265,7 +266,7 @@ function App() {
                     <div>
                       {/* (Botones corregidos a estilo uniforme) */}
                       <Button 
-                        variant="outline-dark" 
+                        variant="outline-secondary" 
                         className="me-2 mb-2"
                         onClick={() => handleShowModal({
                           title: 'Aplicación de Tareas (Full-Stack)',
@@ -278,7 +279,7 @@ function App() {
                         Ver más
                       </Button>
                       <Button 
-                        variant="outline-dark" 
+                        variant="outline-secondary" 
                         href="[LINK_A_TU_DEMO_1]" 
                         target="_blank" 
                         className="me-2 mb-2"
@@ -286,7 +287,7 @@ function App() {
                         <FaExternalLinkAlt className="me-1" /> Demo
                       </Button>
                       <Button 
-                        variant="outline-dark" 
+                        variant="outline-warning" 
                         href="[LINK_A_TU_GITHUB_1]" 
                         target="_blank"
                         className="mb-2"
@@ -301,20 +302,20 @@ function App() {
               {/* --- TARJETA DE PROYECTO 2 --- */}
               <Col>
                 <Card className="project-card">
-                  <Card.Img variant="top" src="/proyecto2.png" alt="Imagen del Proyecto 2" />
+                  <Card.Img variant="top" src="/CumbiaStar.png" alt="Imagen del Proyecto 2" />
                   <Card.Body>
-                    <Card.Title>Buscador de Películas (API)</Card.Title>
+                    <Card.Title>Juego Para E-commerce</Card.Title>
                     <Card.Text>
-                      Interfaz interactiva creada con React que consume la API de 'The Movie Database'...
+                      El desarrollo del juego "Cumbia Estelar" usando Godot Engine y GDScript. El objetivo fue crear una experiencia interactiva que recompensa a los jugadores con cupones para un e-commerce.
                     </Card.Text>
                     <div>
                                             <Button 
-                        variant="outline-dark" 
+                        variant="outline-light" 
                         className="me-2 mb-2"
                         onClick={() => handleShowModal({
                           title: 'Aplicación de Tareas (Full-Stack)',
-                          image: '/web.png',
-                          longDescription: 'Aquí puedes escribir una descripción mucho más larga...',
+                          image: '/CumbiaEstelar.png',
+                          longDescription: '"Cumbia Estelar" es un juego interactivo desarrollado **a pedido de un cliente**, utilizando **Godot Engine** y **GDScript** (un lenguaje con sintaxis similar a Python). El objetivo principal fue crear una experiencia lúdica para los usuarios [del cliente Por USB?], integrando un sistema de recompensas único.',
                           demoLink: '[LINK_A_TU_DEMO_1]',
                           githubLink: '[LINK_A_TU_GITHUB_1]'
                         })}
@@ -322,10 +323,10 @@ function App() {
                         Ver más
                       </Button>
                     
-                      <Button variant="outline-dark" href="[LINK_A_TU_DEMO_2]" target="_blank" className="me-2 mb-2">
+                      <Button variant="outline-warning" href="[LINK_A_TU_DEMO_2]" target="_blank" className="me-2 mb-2">
                         <FaExternalLinkAlt className="me-1" /> Demo
                       </Button>
-                      <Button variant="outline-dark" href="[LINK_A_TU_GITHUB_2]" target="_blank" className="mb-2">
+                      <Button variant="outline-warning" href="[LINK_A_TU_GITHUB_2]" target="_blank" className="mb-2">
                         <FaGithub className="me-1" /> Código
                       </Button>
                     </div>
@@ -344,7 +345,7 @@ function App() {
                     </Card.Text>
                     <div>
                                             <Button 
-                        variant="outline-dark" 
+                        variant="outline-warning" 
                         className="me-2 mb-2"
                         onClick={() => handleShowModal({
                           title: 'Aplicación de Tareas (Full-Stack)',
@@ -357,10 +358,10 @@ function App() {
                         Ver más
                       </Button>
                       
-                      <Button variant="outline-dark" href="[LINK_A_TU_DEMO_3]" target="_blank" className="me-2 mb-2">
+                      <Button variant="outline-light" href="[LINK_A_TU_DEMO_3]" target="_blank" className="me-2 mb-2">
                         <FaExternalLinkAlt className="me-1" /> Demo
                       </Button>
-                      <Button variant="outline-dark" href="[LINK_A_TU_GITHUB_3]" target="_blank" className="mb-2">
+                      <Button variant="outline-light" href="[LINK_A_TU_GITHUB_3]" target="_blank" className="mb-2">
                         <FaGithub className="me-1" /> Código
                       </Button>
                     </div>
