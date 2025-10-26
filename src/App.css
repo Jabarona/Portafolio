@@ -144,14 +144,39 @@
 /* --- Móviles (max-width: 768px) --- */
 @media (max-width: 768px) {
 
-  /* Ajustes Hero Section */
-  .hero-section { display: block; padding-top: 60px; padding-bottom: 40px; min-height: auto; }
-  .hero-name { font-size: 2.8rem; }
-  .hero-title { font-size: 1.3rem; }
-  .hero-description { font-size: 1rem; padding: 0 15px; }
-  .hero-cta-button { padding: 0.6rem 2rem; font-size: 1rem; }
+  /* --- Ajustes Hero Section --- */
+  .hero-section {
+    display: block; /* Quitamos el centrado vertical con flex */
+    padding-top: 60px;
+    padding-bottom: 40px;
+    min-height: auto; /* Permitimos que la altura se ajuste al contenido */
+    text-align: center; /* Aseguramos que todo el texto dentro esté centrado */
+  }
 
-  /* Iconos Sociales en Móvil */
+  /* Reducimos los tamaños de fuente más agresivamente */
+  .hero-name {
+    font-size: 2.2rem; /* Significativamente más pequeño */
+    line-height: 1.2; /* Interlineado más ajustado */
+  }
+  .hero-title {
+    font-size: 1.1rem; /* Más pequeño */
+  }
+  .hero-description {
+    font-size: 0.95rem; /* Ligeramente más pequeño */
+    padding: 0 10px; /* Menos padding si es necesario */
+    max-width: 90%; /* Aseguramos que no toque los bordes */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-greeting {
+      font-size: 1.2rem; /* Ajustamos tamaño del saludo */
+  }
+  .hero-cta-button {
+    padding: 0.6rem 1.5rem; /* Botón ligeramente más pequeño */
+    font-size: 0.9rem;
+  }
+
+  /* Iconos Sociales en Móvil (Mantenemos como estaban) */
   .social-icons-fixed {
     position: static !important; display: flex !important; flex-direction: row !important;
     justify-content: center !important; align-items: center; transform: none !important;
@@ -160,15 +185,19 @@
   }
   .social-icons-fixed a {
     margin: 0 15px !important;
-    color: #f8f9fa !important; /* Color oscuro para fondo claro */
+    color: #f8f9fa !important; /* Color claro para fondo oscuro */
     font-size: 1.8rem;
   }
   .social-icons-fixed a:hover {
-     color: #F7DF1E !important; /* Azul Bootstrap */
+     color: #F7DF1E !important; /* Amarillo hover */
      transform: none;
   }
 
   /* Ajustes Proyectos */
   .project-card:hover { transform: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
-  .projects-section h2 { font-size: 2.5rem; }
+  .projects-section h2 { font-size: 2.2rem; /* Título de sección más pequeño */ }
+
+  /* Ajustes Contacto */
+  .contact-section h2 { font-size: 2.2rem; /* Título de sección más pequeño */}
+
 }

@@ -14,7 +14,6 @@ import Modal from 'react-bootstrap/Modal';
 
 import './App.css';
 import { DiPython, DiReact, DiJsBadge, DiDatabase, DiHtml5, DiCss3 } from "react-icons/di";
-// Importé Si... de 'si' (simple-icons) que es donde están.
 import { SiPostgresql, SiMongodb, SiNodedotjs, SiExpress, SiPython, SiDjango, SiReact as SiReactProject, SiJavascript } from 'react-icons/si'; 
 import { FaLinkedin, FaInstagram, FaGithub, FaExternalLinkAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
@@ -63,7 +62,7 @@ function MainNavbar() {
 
 
 // ===================================================================
-// A PARTIR DE AQUÍ EMPIEZA TU COMPONENTE APP PRINCIPAL
+//  COMPONENTE APP PRINCIPAL
 // ===================================================================
 
 function App() {
@@ -135,7 +134,7 @@ function App() {
       <MainNavbar />
       
       <div className="App-wrapper">
-        {/* SECCIÓN QUIEN SOY - ADAPTADA AL NUEVO DISEÑO */}
+        {/* SECCIÓN QUIEN SOY - */}
 <Container fluid id="quien-soy" className="hero-section text-center d-flex align-items-center justify-content-center">
   <Row className="justify-content-center"> {/* Centramos el contenido */}
     <Col md={10} lg={8}> {/* Ocupa más espacio para el texto */}
@@ -155,10 +154,7 @@ function App() {
       >
         VER MIS PROYECTOS
       </Button>
-    </Col>
-  </Row>
-
-  {/* Iconos Sociales Fijos a la izquierda (nueva posición) */}
+        {/* Iconos Sociales Fijos a la izquierda (nueva posición) */}
   <div className="social-icons-fixed animate__animated animate__fadeInLeft">
     <a href="https://www.linkedin.com/in/jarvi-barona-burbano-4a0998252" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
       <FaLinkedin />
@@ -170,6 +166,9 @@ function App() {
       <FaInstagram />
     </a>
   </div>
+  
+    </Col>
+  </Row>
 </Container>
 {/* FIN SECCIÓN QUIEN SOY */}
         
