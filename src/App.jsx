@@ -248,29 +248,31 @@ function App() {
                 <p>Godot</p>
               </Col>
 
-              {/* Icono 9: AWS */}
-              <Col xs={3} md={3} lg={2} className="skill-icon-container">
-                <FaAws className="skill-icon icon-aws" /> {/* Necesitarás un CSS para icon-aws */}
-                <p>AWS</p>
-              </Col>
-
-              {/* Icono 10: PostgreSQL */}
-              <Col xs={3} md={3} lg={2} className="skill-icon-container">
-                <SiPostgresql className="skill-icon icon-postgresql" /> {/* Necesitarás un CSS para icon-postgresql */}
-                <p>PostgreSQL</p>
-              </Col>
-
-              {/* Icono 11: Docker */}
+              {/* Icono 9: Docker */}
               <Col xs={3} md={3} xl={2} className="skill-icon-container">
                 <SiDocker className="skill-icon icon-docker" /> {/* Necesitarás un CSS para icon-docker */}
                 <p>Docker</p>
               </Col>
 
-              {/* Icono 12: Mysql */}
+              {/* Icono 10: Mysql */}
               <Col xs={3} md={3} xl={2} className="skill-icon-container">
                 <SiMysql className="skill-icon icon-docker" /> {/* Necesitarás un CSS para icon-docker */}
                 <p>MySql</p>
               </Col>
+
+              {/* Icono 11: AWS */}
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
+                <FaAws className="skill-icon icon-aws" /> {/* Necesitarás un CSS para icon-aws */}
+                <p>AWS</p>
+              </Col>
+
+              {/* Icono 12: PostgreSQL */}
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
+                <SiPostgresql className="skill-icon icon-postgresql" /> {/* Necesitarás un CSS para icon-postgresql */}
+                <p>PostgreSQL</p>
+              </Col>
+
+
             </Row>
           </Container>
         </Container>
