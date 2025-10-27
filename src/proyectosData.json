@@ -2,10 +2,10 @@
 {
     "id": 1,
     "title": "Aplicación de Tareas (Full-Stack)",
-    "image":"/CumbiaEstelar.png",
-    "images": ["/CumbiaStar.png",
-    "/CumbiaStar.png",
-    "/CumbiaStar.png"
+    "image":"/CumbiaStar.png",
+    "images": ["/CumbiaStar.png","/SelectorPlayer.png","/Tuto.png", 
+    "/StageTutorial.png",
+    "/StagePartida.png" ,"/GameOver.png"
 ],
     "shortDescription": "Una app completa con React, Node.js y PostgreSQL para gestionar tareas diarias.",
     "longDescription": "Este juego fue desarrollado con godot para una empresa que llamada PorUsb con el fin ... ",
@@ -16,7 +16,7 @@
 {
     "id": 2,
     "title": "Buscador de Películas (API)",
-    "image": "/CumbiaEstelar.png",
+    "image": "/SelectorPlayer.png",
     "shortDescription": "Interfaz interactiva creada con React que consume la API de TMDB.",
     "longDescription": "Descripción detallada del buscador de películas...",
     "demoLink": "[LINK_A_TU_DEMO_2]",
@@ -26,9 +26,18 @@
 {
     "id": 3,
     "title": "Cumbia Estelar (Juego Godot)",
-    "image": "/cambia-estelar.png",
-    "shortDescription": "Juego interactivo en Godot/GDScript que recompensa con cupones.",
-    "longDescription": "`Cumbia Estelar\" es un juego interactivo desarrollado a pedido de un cliente, utilizando Godot Engine y GDScript...\n\nEl desarrollo abarcó tanto el frontend del juego... como una componente backend para gestionar el sistema de cupones... Se implementó una base de datos relacional MySQL...\n\nEste proyecto demostró habilidades en:\n* Desarrollo de videojuegos...\n* Programación...\n* Integración...\n* Gestión de bases de datos...\n* Desarrollo backend básico...",
+    "image":"/CumbiaStar.webp",
+    "images": ["/CumbiaStar.webp","/SelectorPlayer.webp","/Tuto.webp", 
+    "/StagePartida.webp" ,"/GameOver.webp"
+],
+    "shortDescription": "Juego interactivo en Godot/GDScript El juego incentiva a los clientes a participar para ganar códigos de descuento, los cuales se validan contra una base de datos MySQL y se envían automáticamente por email. ",
+    "longDescription": [
+    "A petición de la tienda de informática PorUsB, desarrollé una solución de marketing 'Play-to-Win' para fidelizar clientes y generar ventas. ",
+    "El proyecto consistió en un videojuego completo hecho en Godot Engine, usando GDScript (similar a Python) para toda la lógica de juego y la interfaz. ",
+    "Al alcanzar un puntaje objetivo, el jugador accede a un formulario que se conecta a una base de datos MySQL que gestiona los códigos de descuentos. ",
+    "Finalmente, el sistema valida el logro y envía automáticamente el código ganado al email del jugador, cerrando el ciclo de marketing. ",
+    "Despues con este codigo se hace valido el descuento obtenido para compras en la tienda. "
+],
     "demoLink": "[LINK_A_VIDEO_O_DEMO_CUMBIA]",
     "githubLink": "[LINK_A_TU_GITHUB_CUMBIA]",
     "technologies": ["Godot", "GDScript", "MySQL"]
