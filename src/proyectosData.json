@@ -2,9 +2,13 @@
 {
     "id": 1,
     "title": "Aplicación de Tareas (Full-Stack)",
-    "image": "/web.png",
+    "image":"/CumbiaEstelar.png",
+    "images": ["/CumbiaStar.png",
+    "/CumbiaStar.png",
+    "/CumbiaStar.png"
+],
     "shortDescription": "Una app completa con React, Node.js y PostgreSQL para gestionar tareas diarias.",
-    "longDescription": "Aquí puedes escribir una descripción mucho más larga...",
+    "longDescription": "Este juego fue desarrollado con godot para una empresa que llamada PorUsb con el fin ... ",
     "demoLink": "[LINK_A_TU_DEMO_1]",
     "githubLink": "[LINK_A_TU_GITHUB_1]",
     "technologies": ["React", "JavaScript", "PostgreSQL"] 
@@ -12,12 +16,12 @@
 {
     "id": 2,
     "title": "Buscador de Películas (API)",
-    "image": "/proyecto2.png",
+    "image": "/CumbiaEstelar.png",
     "shortDescription": "Interfaz interactiva creada con React que consume la API de TMDB.",
     "longDescription": "Descripción detallada del buscador de películas...",
     "demoLink": "[LINK_A_TU_DEMO_2]",
     "githubLink": "[LINK_A_TU_GITHUB_2]",
-    "technologies": ["React", "JavaScript"]
+    "technologies": ["Python", "Django" ,"PostgreSQL"]
 },
 {
     "id": 3,
@@ -27,6 +31,6 @@
     "longDescription": "`Cumbia Estelar\" es un juego interactivo desarrollado a pedido de un cliente, utilizando Godot Engine y GDScript...\n\nEl desarrollo abarcó tanto el frontend del juego... como una componente backend para gestionar el sistema de cupones... Se implementó una base de datos relacional MySQL...\n\nEste proyecto demostró habilidades en:\n* Desarrollo de videojuegos...\n* Programación...\n* Integración...\n* Gestión de bases de datos...\n* Desarrollo backend básico...",
     "demoLink": "[LINK_A_VIDEO_O_DEMO_CUMBIA]",
     "githubLink": "[LINK_A_TU_GITHUB_CUMBIA]",
-    "technologies": ["Godot", "GDScript", "MySQL", "Apache"]
+    "technologies": ["Godot", "GDScript", "MySQL"]
 }
 ]

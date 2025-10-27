@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
+import Carousel from 'react-bootstrap/Carousel';
+import proyectosData from './proyectosData.json'; 
 
 
 import Row from 'react-bootstrap/Row';
@@ -15,10 +17,32 @@ import Modal from 'react-bootstrap/Modal';
 
 import './App.css';
 import { DiPython, DiReact, DiJsBadge, DiDatabase, DiHtml5, DiCss3 } from "react-icons/di";
-import { SiPostgresql, SiMongodb, SiNodedotjs, SiExpress, SiPython, SiDjango, SiReact as SiReactProject, SiJavascript , SiDocker,SiGodotengine } from 'react-icons/si'; 
-import { FaLinkedin, FaInstagram, FaGithub, FaExternalLinkAlt, FaWhatsapp, FaEnvelope,FaAws } from "react-icons/fa";
+import { SiPostgresql, SiDjango, SiGodotengine, SiMysql,SiNodedotjs, SiDocker,SiReact  } from 'react-icons/si'; 
+import { FaLinkedin, FaInstagram, FaGithub, FaExternalLinkAlt, FaWhatsapp, FaEnvelope, FaAws } from "react-icons/fa";
 
+const techIconMap = {
+  // --- De 'di' ---
+  "Python": <DiPython title="Python" className="icon-tech-card icon-python"/>,
+  "React": <DiReact title="React" className="icon-tech-card icon-react"/>, 
+  "JavaScript": <DiJsBadge title="JavaScript" className="icon-tech-card icon-js"/>,
+  "HTML5": <DiHtml5 title="HTML5" className="icon-tech-card icon-html"/>,
+  "CSS3": <DiCss3 title="CSS3" className="icon-tech-card icon-css"/>,
 
+  // --- De 'si' ---
+  "PostgreSQL": <SiPostgresql title="PostgreSQL" className="icon-tech-card icon-postgresql"/>,
+  "Django": <SiDjango title="Django" className="icon-tech-card icon-django"/>,
+  "Docker": <SiDocker title="Docker" className="icon-tech-card icon-docker"/>,
+  "Godot": <SiGodotengine title="Godot Engine" className="icon-tech-card icon-godot"/>,
+  "MySQL": <SiMysql title="MySQL" className="icon-tech-card icon-mysql"/>, 
+  "Node.js": <SiNodedotjs title="Node.js" className="icon-tech-card icon-node"/>, 
+
+  // --- De 'fa' ---
+  "AWS": <FaAws title="AWS" className="icon-tech-card icon-aws"/>,
+
+  // --- Placeholder para tecnologías sin icono ---
+  "GDScript": null, 
+  "Apache": null   
+};
 
 
 function MainNavbar() {
@@ -61,6 +85,8 @@ function MainNavbar() {
     </Navbar>
   );
 }
+
+
 
 
 // ===================================================================
@@ -239,6 +265,12 @@ function App() {
                 <SiDocker className="skill-icon icon-docker" /> {/* Necesitarás un CSS para icon-docker */}
                 <p>Docker</p>
               </Col>
+
+              {/* Icono 12: Mysql */}
+              <Col xs={3} md={3} xl={2} className="skill-icon-container">
+                <SiMysql className="skill-icon icon-docker" /> {/* Necesitarás un CSS para icon-docker */}
+                <p>MySql</p>
+              </Col>
             </Row>
           </Container>
         </Container>
@@ -253,121 +285,65 @@ function App() {
               </Col>
             </Row>
             <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
-
-              {/* --- TARJETA DE PROYECTO 1 --- */}
-              <Col>
-                <Card className="project-card">
-                  <Card.Img variant="top" src="/web.png" alt="Imagen del Proyecto 1" />
-                  <Card.Body>
-                    <Card.Title>Aplicación de Tareas (Full-Stack)</Card.Title>
-                    <Card.Text>
-                      Una app completa con React, Node.js y base de datos PostgreSQL...
-                    </Card.Text>
-                    <div>
-                      {/* (Botones corregidos a estilo uniforme) */}
-                      <Button 
-                        variant="outline-secondary" 
-                        className="me-2 mb-2"
-                        onClick={() => handleShowModal({
-                          title: 'Aplicación de Tareas (Full-Stack)',
-                          image: '/web.png',
-                          longDescription: 'Aquí puedes escribir una descripción mucho más larga...',
-                          demoLink: '[LINK_A_TU_DEMO_1]',
-                          githubLink: '[LINK_A_TU_GITHUB_1]'
-                        })}
-                      >
-                        Ver más
-                      </Button>
-                      <Button 
-                        variant="outline-secondary" 
-                        href="[LINK_A_TU_DEMO_1]" 
-                        target="_blank" 
-                        className="me-2 mb-2"
-                      >
-                        <FaExternalLinkAlt className="me-1" /> Demo
-                      </Button>
-                      <Button 
-                        variant="outline-warning" 
-                        href="[LINK_A_TU_GITHUB_1]" 
-                        target="_blank"
-                        className="mb-2"
-                      >
-                        <FaGithub className="me-1" /> Código
-                      </Button>
-                    </div>
-                  </Card.Body>
-                </Card>
+              {/* --- RENDERIZADO DINÁMICO DESDE JSON --- */}
+              {proyectosData.map((proyecto) => (
+              <Col key={proyecto.id}>
               </Col>
+              ))}
+            {/* --- FIN DEL RENDERIZADO DINÁMICO --- */}
 
-              {/* --- TARJETA DE PROYECTO 2 --- */}
-              <Col>
-                <Card className="project-card">
-                  <Card.Img variant="top" src="/CumbiaStar.png" alt="Imagen del Proyecto 2" />
-                  <Card.Body>
-                    <Card.Title>Juego Para E-commerce</Card.Title>
-                    <Card.Text>
-                      El desarrollo del juego "Cumbia Estelar" usando Godot Engine y GDScript. El objetivo fue crear una experiencia interactiva que recompensa a los jugadores con cupones para un e-commerce.
-                    </Card.Text>
-                    <div>
-                                            <Button 
-                        variant="outline-light" 
-                        className="me-2 mb-2"
-                        onClick={() => handleShowModal({
-                          title: 'Aplicación de Tareas (Full-Stack)',
-                          image: '/CumbiaEstelar.png',
-                          longDescription: '"Cumbia Estelar" es un juego interactivo desarrollado **a pedido de un cliente**, utilizando **Godot Engine** y **GDScript** (un lenguaje con sintaxis similar a Python). El objetivo principal fue crear una experiencia lúdica para los usuarios [del cliente Por USB?], integrando un sistema de recompensas único.',
-                          demoLink: '[LINK_A_TU_DEMO_1]',
-                          githubLink: '[LINK_A_TU_GITHUB_1]'
-                        })}
-                      >
-                        Ver más
-                      </Button>
-                    
-                      <Button variant="outline-warning" href="[LINK_A_TU_DEMO_2]" target="_blank" className="me-2 mb-2">
-                        <FaExternalLinkAlt className="me-1" /> Demo
-                      </Button>
-                      <Button variant="outline-warning" href="[LINK_A_TU_GITHUB_2]" target="_blank" className="mb-2">
-                        <FaGithub className="me-1" /> Código
-                      </Button>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Col>
+            
+              {/* --- RENDERIZADO DINÁMICO DESDE JSON --- */}
+{/* Mapeamos sobre cada 'proyecto' en el archivo JSON */}
+{proyectosData.map((proyecto) => (
+  // 'key' es importante para React cuando mapea listas
+  <Col key={proyecto.id}>
+    <Card className="project-card">
+      {/* Usa la imagen del JSON */}
+      <Card.Img
+        variant="top"
+        // Muestra la imagen única (cambiaremos esto después para el carrusel)
+        src={proyecto.image} 
+        alt={`Imagen de ${proyecto.title}`}
+      />
+      <Card.Body>
+        <Card.Title>{proyecto.title}</Card.Title>
+        <Card.Text>{proyecto.shortDescription}</Card.Text>
+        <div className="project-tech-icons mb-3"> 
+                {/* Verifica si el array 'technologies' existe antes de mapear */}
+                {proyecto.technologies && proyecto.technologies.map((techName) => (
+                  // Busca el icono en el mapa y lo renderiza si existe
+                  techIconMap[techName] ? <span key={techName}>{techIconMap[techName]}</span> : null
+                ))}
+              </div>
+              {/* --- FIN: ICONOS DE TECNOLOGÍA --- */}
+        
 
-              {/* --- TARJETA DE PROYECTO 3 --- */}
-              <Col>
-                <Card className="project-card">
-                  <Card.Img variant="top" src="/proyecto3.png" alt="Imagen del Proyecto 3" />
-                  <Card.Body>
-                    <Card.Title>Página de Aterrizaje (Landing Page)</Card.Title>
-                    <Card.Text>
-                      Diseño de una landing page estática responsiva para un cliente...
-                    </Card.Text>
-                    <div>
-                                            <Button 
-                        variant="outline-warning" 
-                        className="me-2 mb-2"
-                        onClick={() => handleShowModal({
-                          title: 'Aplicación de Tareas (Full-Stack)',
-                          image: '/web.png',
-                          longDescription: 'Aquí puedes escribir una descripción mucho más larga...',
-                          demoLink: '[LINK_A_TU_DEMO_1]',
-                          githubLink: '[LINK_A_TU_GITHUB_1]'
-                        })}
-                      >
-                        Ver más
-                      </Button>
-                      
-                      <Button variant="outline-light" href="[LINK_A_TU_DEMO_3]" target="_blank" className="me-2 mb-2">
-                        <FaExternalLinkAlt className="me-1" /> Demo
-                      </Button>
-                      <Button variant="outline-light" href="[LINK_A_TU_GITHUB_3]" target="_blank" className="mb-2">
-                        <FaGithub className="me-1" /> Código
-                      </Button>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Col>
+        <div>
+          <Button
+            variant="outline-light" // Usando 'secondary' para mejor contraste
+            className="me-2 mb-2"
+            onClick={() => handleShowModal(proyecto)} // Pasa el objeto completo
+          >
+            Ver más
+          </Button>
+          {/* Botones condicionales */}
+          {proyecto.demoLink && (
+            <Button variant="outline-warning" href={proyecto.demoLink} target="_blank" className="me-2 mb-2">
+              <FaExternalLinkAlt className="me-1" /> Demo
+            </Button>
+          )}
+          {proyecto.githubLink && (
+            <Button variant="outline-warning" href={proyecto.githubLink} target="_blank" className="mb-2">
+              <FaGithub className="me-1" /> Código
+            </Button>
+          )}
+        </div>
+      </Card.Body>
+    </Card>
+  </Col>
+))}
+{/* --- FIN DEL RENDERIZADO DINÁMICO --- */}
 
             </Row>
           </Container>
@@ -461,32 +437,68 @@ function App() {
         </Container>
 
         {/* 6. El Modal */}
-        <Modal show={showModal} onHide={handleCloseModal} size="xl" centered>
-          {activeProject && (
-            <>
-              <Modal.Header closeButton closeVariant="white" className="bg-dark text-white">
-                <Modal.Title>{activeProject.title}</Modal.Title>
-              </Modal.Header>
-              <Modal.Body className="bg-dark text-white">
-                <Image src={activeProject.image} fluid rounded className="mb-3" />
-                <p>
-                  {activeProject.longDescription}
-                </p>
-              </Modal.Body>
-              <Modal.Footer className="bg-dark">
-                <Button variant="outline-light" href={activeProject.demoLink} target="_blank">
-                  <FaExternalLinkAlt className="me-1" /> Ver Demo
-                </Button>
-                <Button variant="outline-light" href={activeProject.githubLink} target="_blank">
-                  <FaGithub className="me-1" /> Código
-                </Button>
-                <Button variant="outline-light" onClick={handleCloseModal}>
-                  Cerrar
-                </Button>
-              </Modal.Footer>
-            </>
-          )}
-        </Modal>
+      <Modal show={showModal} onHide={handleCloseModal} size="xl" centered>
+        {activeProject && ( // Asegura que activeProject no sea null
+          <>
+            <Modal.Header closeButton closeVariant="white" className="bg-dark text-white">
+              <Modal.Title>{activeProject.title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="bg-dark text-white">
+
+              {/* --- CARRUSEL O IMAGEN ÚNICA --- */}
+              {/* Verifica si existe la propiedad 'images' y tiene contenido */}
+              {activeProject.images && activeProject.images.length > 0 ? (
+                // Si sí, muestra el Carrusel
+                <Carousel interval={null} className="mb-3 project-carousel">
+                  {activeProject.images.map((imgSrc, index) => (
+                    <Carousel.Item key={index}>
+                      <Image 
+                        src={imgSrc} 
+                        fluid 
+                        rounded 
+                        alt={`${activeProject.title} - Imagen ${index + 1}`} 
+                        className="d-block w-100" // Clases Bootstrap
+                      />
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              ) : activeProject.image ? (
+                // Si no hay 'images', pero sí hay 'image', muestra la Imagen única
+                <Image 
+                  src={activeProject.image} 
+                  fluid 
+                  rounded 
+                  className="mb-3" 
+                  alt={`Imagen de ${activeProject.title}`} 
+                />
+              ) : null /* Si no hay ninguna imagen definida, no muestra nada */}
+              {/* --- FIN CARRUSEL/IMAGEN --- */}
+
+              <p>
+                {/* Muestra la descripción larga */}
+                {activeProject.longDescription} 
+              </p>
+            </Modal.Body>
+            <Modal.Footer className="bg-dark">
+              {/* Botones condicionales (solo se muestran si el link existe) */}
+              {activeProject.demoLink && (
+                  <Button variant="outline-light" href={activeProject.demoLink} target="_blank">
+                      <FaExternalLinkAlt className="me-1" /> Ver Demo
+                  </Button>
+              )}
+              {activeProject.githubLink && (
+                  <Button variant="outline-light" href={activeProject.githubLink} target="_blank">
+                      <FaGithub className="me-1" /> Código
+                  </Button>
+              )}
+              <Button variant="outline-light" onClick={handleCloseModal}>
+                Cerrar
+              </Button>
+            </Modal.Footer>
+          </>
+        )}
+      </Modal>
+
 
         {/* 7. El Footer */}
         <footer className="simple-footer">

@@ -86,15 +86,27 @@
 .icon-react { color: #61DAFB !important; }
 .icon-python { color: #3776AB !important; }
 .icon-js { color: #F7DF1E !important; }
-.icon-sql { color: #f29111 !important; } /* Naranja genérico para SQL */
+.icon-sql { color: #f29111 !important; } /* O usa .icon-mysql, .icon-postgresql si los tienes */
 .icon-html { color: #E34F26 !important; }
 .icon-css { color: #1572B6 !important; }
+.icon-django { color: #092E20 !important; }
+.icon-godot { color: #478CBF !important; }
+.icon-aws { color: #FF9900 !important; }
+.icon-postgresql { color: #336791 !important; }
+.icon-docker { color: #2496ED !important; }
+.icon-node { color: #339933 !important; } /* Si usas Node.js */
+.icon-mysql { color: #4479A1 !important; } /* Si usas MySQL */
 
-.icon-django { color: #092E20; } /* Verde oscuro Django */
-.icon-godot { color: #478CBF; } /* Azul Godot */
-.icon-aws { color: #FF9900; } /* Naranja AWS */
-.icon-postgresql { color: #336791; } /* Azul PostgreSQL */
-.icon-docker { color: #2496ED; } /* Azul Docker */
+/* Tamaño PEQUEÑO para Tarjetas de Proyecto */
+.icon-tech-card {
+  font-size: 1.8rem; /* Tamaño más pequeño */
+  margin-right: 8px;  /* Espacio entre iconos */
+  vertical-align: middle; /* Alinea mejor con el texto si hubiera */
+}
+/* Color por defecto si un icono no tiene clase de color */
+.skill-icon, .icon-tech-card {
+  color: #adb5bd; /* Un gris claro por defecto */
+}
 
 /* ------------------------------------------- */
 
@@ -152,6 +164,21 @@
 .project-card .btn {
   font-size: 0.9rem;
   padding: 0.5rem 0.8rem;
+}
+
+/* --- Estilos Opcionales para el Carrusel del Modal --- */
+.project-carousel .carousel-item img {
+  max-height: 500px; /* Limita la altura máxima (ajusta según necesites) */
+  object-fit: contain; /* Asegura que se vea toda la imagen */
+  margin: 0 auto; /* Centra la imagen si es más estrecha que el carrusel */
+}
+
+/* Opcional: Estilo de controles para mejor visibilidad en fondo oscuro */
+.project-carousel .carousel-control-prev-icon,
+.project-carousel .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  border-radius: 50%;
+  padding: 10px;
 }
 
 
