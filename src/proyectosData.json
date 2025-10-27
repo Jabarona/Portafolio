@@ -1,34 +1,35 @@
 [
 {
     "id": 1,
-    "title": "Aplicación de Tareas (Full-Stack)",
-    "image":"/CumbiaStar.png",
-    "images": ["/CumbiaStar.png","/SelectorPlayer.png","/Tuto.png", 
-    "/StageTutorial.png",
-    "/StagePartida.png" ,"/GameOver.png"
-],
-    "shortDescription": "Una app completa con React, Node.js y PostgreSQL para gestionar tareas diarias.",
-    "longDescription": "Este juego fue desarrollado con godot para una empresa que llamada PorUsb con el fin ... ",
+    "title": "Aplicacion movil (DirtyJeans)",
+    "image":"/DirtyJeans.webp",
+    "images": ["/DirtyJeans.webp"],
+    "shortDescription": "Aplicacion movil , creada para darle solucion a una fabrica de jeans en relacion a los pagos de sus empleados",
+    "longDescription": " ",
     "demoLink": "[LINK_A_TU_DEMO_1]",
     "githubLink": "[LINK_A_TU_GITHUB_1]",
-    "technologies": ["React", "JavaScript", "PostgreSQL"] 
+    "technologies": ["React", "JavaScript", "PostgreSQL","TypeScript"] 
 },
 {
     "id": 2,
-    "title": "Buscador de Películas (API)",
-    "image": "/SelectorPlayer.png",
-    "shortDescription": "Interfaz interactiva creada con React que consume la API de TMDB.",
+    "title": "Sistema de Gestion de Reservistas Militares (SIGEPER)",
+    "image": "/Sigeper.webp",
+    "images":["Sigeper.webp"],
+    "shortDescription":["Proyecto enfocado en solucionar la gestión manual y dispersa de la Reserva Militar. ",
+                        "Desarrollamos SIGEPER, un sistema web centralizado para registrar, actualizar y consultar el historial completo del personal. ",
+                        "El proyecto se implementó utilizando un stack de Django (Python),PostgreSQL y Bootstrap.",
+                        ""],
     "longDescription": "Descripción detallada del buscador de películas...",
     "demoLink": "[LINK_A_TU_DEMO_2]",
     "githubLink": "[LINK_A_TU_GITHUB_2]",
-    "technologies": ["Python", "Django" ,"PostgreSQL"]
+    "technologies": ["Python", "Django" ,"PostgreSQL" , "Bootstrap"]
 },
 {
     "id": 3,
-    "title": "Cumbia Estelar (Juego Godot)",
+    "title": "Juego Desarrollado en Godot (CUMBIA ESTELAR)",
     "image":"/CumbiaStar.webp",
     "images": ["/CumbiaStar.webp","/SelectorPlayer.webp","/Tuto.webp", 
-    "/StagePartida.webp" ,"/GameOver.webp"
+    "/StagePartida.webp" , "/Cupon.webp" ,"/GameOver.webp"
 ],
     "shortDescription": "Juego interactivo en Godot/GDScript El juego incentiva a los clientes a participar para ganar códigos de descuento, los cuales se validan contra una base de datos MySQL y se envían automáticamente por email. ",
     "longDescription": [

@@ -17,8 +17,8 @@ import Modal from 'react-bootstrap/Modal';
 
 import './App.css';
 import { DiPython, DiReact, DiJsBadge, DiDatabase, DiHtml5, DiCss3 } from "react-icons/di";
-import { SiPostgresql, SiDjango, SiGodotengine, SiMysql,SiNodedotjs, SiDocker,SiReact  } from 'react-icons/si'; 
-import { FaLinkedin, FaInstagram, FaGithub, FaExternalLinkAlt, FaWhatsapp, FaEnvelope, FaAws } from "react-icons/fa";
+import { SiPostgresql, SiDjango, SiGodotengine, SiMysql,SiNodedotjs, SiDocker,SiReact ,SiTypescript } from 'react-icons/si'; 
+import { FaLinkedin, FaInstagram, FaGithub, FaExternalLinkAlt, FaWhatsapp, FaEnvelope, FaAws ,FaBootstrap } from "react-icons/fa";
 
 const techIconMap = {
   // --- De 'di' ---
@@ -34,10 +34,12 @@ const techIconMap = {
   "Docker": <SiDocker title="Docker" className="icon-tech-card icon-docker"/>,
   "Godot": <SiGodotengine title="Godot Engine" className="icon-tech-card icon-godot"/>,
   "MySQL": <SiMysql title="MySQL" className="icon-tech-card icon-mysql"/>, 
-  "Node.js": <SiNodedotjs title="Node.js" className="icon-tech-card icon-node"/>, 
+  "Node.js": <SiNodedotjs title="Node.js" className="icon-tech-card icon-node"/>,
+  "TypeScript": <SiTypescript title="TypeScript" className="icon-tech-card icon-typescript"/>,
 
   // --- De 'fa' ---
   "AWS": <FaAws title="AWS" className="icon-tech-card icon-aws"/>,
+  "Bootstrap": <FaBootstrap title="Bootstrap" className="icon-tech-card icon-bootstrap"/>,
 
   // --- Placeholder para tecnologías sin icono ---
   "GDScript": null, 
@@ -200,9 +202,6 @@ function App() {
 </Container>
 {/* FIN SECCIÓN QUIEN SOY */}
         
-        
-        
-
         {/* 3. Sección Habilidades */}
         <Container fluid className="skills-section">
           <Container>
@@ -248,6 +247,7 @@ function App() {
                 <p>Godot</p>
               </Col>
 
+
               {/* Icono 9: Docker */}
               <Col xs={3} md={3} xl={2} className="skill-icon-container">
                 <SiDocker className="skill-icon icon-docker" /> {/* Necesitarás un CSS para icon-docker */}
@@ -270,6 +270,12 @@ function App() {
               <Col xs={3} md={3} lg={2} className="skill-icon-container">
                 <SiPostgresql className="skill-icon icon-postgresql" /> {/* Necesitarás un CSS para icon-postgresql */}
                 <p>PostgreSQL</p>
+              </Col>
+
+              {/* Icono 13: Bootstrap */}
+              <Col xs={3} md={3} lg={2} className="skill-icon-container">
+                <FaBootstrap className="skill-icon icon-bootstrap" /> {/* Necesitarás un CSS para icon-postgresql */}
+                <p>Bootstrap</p>
               </Col>
 
 

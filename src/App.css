@@ -94,8 +94,10 @@
 .icon-aws { color: #FF9900 !important; }
 .icon-postgresql { color: #336791 !important; }
 .icon-docker { color: #2496ED !important; }
-.icon-node { color: #339933 !important; } /* Si usas Node.js */
-.icon-mysql { color: #4479A1 !important; } /* Si usas MySQL */
+.icon-node { color: #339933 !important; } 
+.icon-mysql { color: #4479A1 !important; } 
+.icon-bootstrap { color: #7952B3 !important; }
+.icon-typescript { color: #3178c6 !important; }
 
 /* Tamaño PEQUEÑO para Tarjetas de Proyecto */
 .icon-tech-card {
