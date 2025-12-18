@@ -1,16 +1,68 @@
-# React + Vite
+# 🚀 Mi Portafolio Profesional - [Tu Nombre]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es mi portafolio personal desarrollado con **React**, diseñado para mostrar mis proyectos, habilidades y trayectoria como Ingeniero Informático.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologías Utilizadas
 
-## React Compiler
+El proyecto fue construido utilizando las siguientes herramientas:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend:** React.js + Vite
+* **Estilos:** Bootstrap & React-Bootstrap
+* **Iconos:** React Icons (Font Awesome, DevIcons, Simple Icons)
+* **Datos:** JSON Dinámico (para la carga de proyectos)
+* **Despliegue:** [Firebase / Vercel / GitHub Pages - El que elijas]
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Características Principales
+
+* **Carga Dinámica de Proyectos:** Los proyectos se renderizan automáticamente desde un archivo JSON, facilitando la actualización de contenido.
+* **Mapeo de Tecnologías:** Cada tarjeta de proyecto muestra automáticamente los iconos de las herramientas utilizadas.
+* **Diseño Responsivo:** Adaptado para dispositivos móviles, tablets y escritorio mediante Bootstrap.
+* **Sección de Habilidades:** Visualización clara de stacks tecnológicos con iconos personalizados.
+* **Formulario de Contacto:** Integración para mensajes directos y enlaces rápidos a redes sociales (LinkedIn, GitHub, WhatsApp).
+* **Descarga de CV:** Botón directo en el Navbar para descargar mi currículum en formato Oxford.
+
+---
+
+## 📂 Estructura del Proyecto
+
+```text
+src/
+├── assets/          # Imágenes y archivos estáticos
+├── data/
+│   └── proyectos.json # Base de datos de los proyectos
+├── components/      # Componentes de React (Navbar, Footer, etc.)
+├── App.jsx          # Lógica principal y mapeo de iconos
+├── App.css          # Estilos personalizados y clases de color
+└── main.jsx         # Punto de entrada
+
+🚀 Instalación y Uso Local
+Si deseas replicar este proyecto localmente, sigue estos pasos:
+
+Clonar el repositorio:
+
+Bash
+
+git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+Instalar dependencias:
+
+Bash
+
+npm install
+Correr el proyecto en desarrollo:
+
+Bash
+
+npm run dev
+Abrir el navegador: Visita http://localhost:5173/
+
+👤 Autor
+JARVI STEVEL BARONA BURBANO - Ingeniero Informático 
+
+LinkedIn: https://www.linkedin.com/in/jarvi-barona-burbano-4a0998252/
+
+
+Hecho con ❤️ para mostrar mi pasión por el desarrollo de software.
