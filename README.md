@@ -1,4 +1,4 @@
-# 🚀 Mi Portafolio Profesional - [Tu Nombre]
+# 🚀 Mi Portafolio Profesional - [Jarvi Barona]
 
 Este es mi portafolio personal desarrollado con **React**, diseñado para mostrar mis proyectos, habilidades y trayectoria como Ingeniero Informático.
 
