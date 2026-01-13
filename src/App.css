@@ -115,6 +115,11 @@
   display: flex;
 }
 
+.projects-header-col {
+  display: block !important; 
+  text-align: center;
+  width: 100%;
+}
 
 /* --- Estilos Sección Proyectos --- */
 .projects-section { background-color: #212529 ; 

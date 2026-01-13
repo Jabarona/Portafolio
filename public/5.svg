@@ -1,0 +1,8 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="256" cy="256" r="230" stroke="#FFD700" stroke-width="20" fill="none"/>
+    <circle cx="486" cy="256" r="26" fill="#FFD700"/>
+    <circle cx="26" cy="256" r="26" fill="#FFD700"/>
+    <text x="50%" y="57%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="200" fill="#ffffff">
+        JB
+    </text>
+</svg>

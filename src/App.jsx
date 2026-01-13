@@ -50,10 +50,19 @@ const techIconMap = {
 function MainNavbar() {
   return (
     // 'sticky="top"' es un buen agregado, hace que se quede pegado arriba al hacer scroll
-    <Navbar bg="dark" data-bs-theme="dark" expand="lg" sticky="top">
-      <Container>
-        {/* En vez de "Navbar with text", pones tu nombre */}
-        <Navbar.Brand href="#inicio">JB</Navbar.Brand>
+      <Navbar bg="dark" data-bs-theme="dark" expand="lg" sticky="top">
+        <Container>
+          <Navbar.Brand href="#quien-soy" className="d-flex align-items-center">
+    <img
+      src="/5.svg"  
+      alt="Logo JBB"
+      width="40"           // Ajusta el tamaño 
+      height="40"
+      className="d-inline-block align-top"
+    />
+  </Navbar.Brand> 
+          
+
         
         {/* Esto es el botón de hamburguesa para móvil, lo dejamos */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -171,10 +180,10 @@ function App() {
       <p className="hero-greeting animate__animated animate__fadeInDown">¡HOLA, SOY</p>
       <h1 className="hero-name animate__animated animate__fadeInLeft">JARVI BARONA</h1>
       <p className="hero-title animate__animated animate__fadeInUp">
-        Un Desarrollador Frontend apasionado por construir experiencias web increíbles.
+        
       </p>
       <p className="hero-description animate__animated animate__fadeInUp">
-        Apasionado por el desarrollo web y la creación de soluciones innovadoras que impactan positivamente.
+      Ingeniero Informático con visión integral y capacidad para transformar la complejidad técnica en soluciones escalables. Me especializo en diseñar arquitecturas robustas que aportan valor estratégico a través de la tecnología, la seguridad y los datos.
       </p>
       <Button 
         variant="outline-warning" 
@@ -189,11 +198,8 @@ function App() {
     <a href="https://www.linkedin.com/in/jarvi-barona-burbano-4a0998252" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
       <FaLinkedin />
     </a>
-    <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <a href="https://github.com/Jabarona" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
       <FaGithub />
-    </a>
-    <a href="https://instagram.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-      <FaInstagram />
     </a>
   </div>
 
@@ -241,12 +247,6 @@ function App() {
                 <p>Django</p>
               </Col>
 
-              {/* Icono 8: Godot */}
-              <Col xs={3} md={3} lg={2} className="skill-icon-container">
-                <SiGodotengine className="skill-icon icon-godot" /> {/* Necesitarás un CSS para icon-godot */}
-                <p>Godot</p>
-              </Col>
-
 
               {/* Icono 9: Docker */}
               <Col xs={3} md={3} xl={2} className="skill-icon-container">
@@ -287,7 +287,7 @@ function App() {
         <Container fluid id="proyectos" className="projects-section">
           <Container>
             <Row>
-              <Col className="text-center mb-5">
+              <Col className="projects-header-col mb-5">
                 <h2>Mis Proyectos</h2>
                 <p className="lead">Una muestra de mis trabajos más recientes.</p>
               </Col>

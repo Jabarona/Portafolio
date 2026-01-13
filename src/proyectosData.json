@@ -8,7 +8,7 @@
     "longDescription": "Desarrollo integral de una plataforma de comercio electrónico de alto rendimiento para Tessco Chile. El proyecto consistió en la creación de un ecosistema digital compuesto por un Frontend reactivo en React, enfocado en la conversión y optimización de la experiencia de usuario (UX), y un Backend robusto en Node.js encargado de la lógica transaccional. \n\nEntre las implementaciones técnicas más destacadas se encuentran:\n\n* **Gestión de Datos:** Diseño de una base de datos relacional en PostgreSQL para garantizar la integridad referencial entre productos, categorías y pedidos.\n* **Pasarela de Pagos:** Integración profunda con la API de Mercado Pago, permitiendo transacciones seguras y conciliación automática de estados de pago.\n* **Panel Administrativo (CMS):** Creación de un dashboard privado para el cliente que permite la gestión CRUD de inventario, control de stock en tiempo real y administración de pedidos.\n* **Escalabilidad:** Implementación de una arquitectura orientada a servicios que separa claramente la capa de presentación de la lógica de negocio.\n\nEste proyecto logró digitalizar el 100% del catálogo de la empresa, permitiendo ventas automatizadas 24/7 y una gestión centralizada de su presencia online.",
     "demoLink": "https://www.tesscochile.cl",
     "githubLink": "https://github.com/Jabarona/TesscoChile",
-    "technologies": ["React", "Node.js", "JavaScript", "PostgreSQL", "MercadoPago"]
+    "technologies": ["React", "Node.js", "JavaScript", "PostgreSQL", "MercadoPago","Docker"]
 },
 {
     "id": 2,
