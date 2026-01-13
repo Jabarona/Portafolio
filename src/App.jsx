@@ -310,7 +310,7 @@ function App() {
       {/* Usa la imagen del JSON */}
       <Card.Img
         variant="top"
-        // Muestra la imagen única (cambiaremos esto después para el carrusel)
+        
         src={proyecto.image} 
         alt={`Imagen de ${proyecto.title}`}
       />

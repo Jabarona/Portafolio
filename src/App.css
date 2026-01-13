@@ -111,6 +111,10 @@
 }
 
 /* ------------------------------------------- */
+.projects-section .row > .col {
+  display: flex;
+}
+
 
 /* --- Estilos Sección Proyectos --- */
 .projects-section { background-color: #212529 ; 

@@ -1,46 +1,39 @@
 [
 {
-    "id": 1,
-    "title": "Aplicacion movil (DirtyJeans)",
-    "image":"/DirtyJeans.webp",
-    "images": ["/DirtyJeans.webp"],
-    "shortDescription": "Aplicacion movil , creada para darle solucion a una fabrica de jeans en relacion a los pagos de sus empleados",
-    "longDescription": " ",
-    "demoLink": "[LINK_A_TU_DEMO_1]",
-    "githubLink": "[LINK_A_TU_GITHUB_1]",
-    "technologies": ["React", "JavaScript", "PostgreSQL","TypeScript"] 
+    "id": 4,
+    "title": "Tessco Chile (E-commerce)",
+    "image": "/Inicio.Tie.webp",
+    "images": ["/Login.webp", "/PanelAdmin.webp", "/Gestion.Ima.webp" , "/Gestion.Pe.webp" , "/Gestion.pro.webp" , "/InicioTienda.webp"],
+    "shortDescription": "Solución integral de comercio electrónico diseñada para la digitalización de ventas y gestión de inventarios. Desarrollada bajo un stack Full-Stack con React y Node.js, la plataforma centraliza el control de catálogo en una base de datos PostgreSQL e integra la API de Mercado Pago para automatizar el ciclo de pagos y pedidos de forma segura.",
+    "longDescription": "Desarrollo integral de una plataforma de comercio electrónico de alto rendimiento para Tessco Chile. El proyecto consistió en la creación de un ecosistema digital compuesto por un Frontend reactivo en React, enfocado en la conversión y optimización de la experiencia de usuario (UX), y un Backend robusto en Node.js encargado de la lógica transaccional. \n\nEntre las implementaciones técnicas más destacadas se encuentran:\n\n* **Gestión de Datos:** Diseño de una base de datos relacional en PostgreSQL para garantizar la integridad referencial entre productos, categorías y pedidos.\n* **Pasarela de Pagos:** Integración profunda con la API de Mercado Pago, permitiendo transacciones seguras y conciliación automática de estados de pago.\n* **Panel Administrativo (CMS):** Creación de un dashboard privado para el cliente que permite la gestión CRUD de inventario, control de stock en tiempo real y administración de pedidos.\n* **Escalabilidad:** Implementación de una arquitectura orientada a servicios que separa claramente la capa de presentación de la lógica de negocio.\n\nEste proyecto logró digitalizar el 100% del catálogo de la empresa, permitiendo ventas automatizadas 24/7 y una gestión centralizada de su presencia online.",
+    "demoLink": "https://www.tesscochile.cl",
+    "githubLink": "https://github.com/Jabarona/TesscoChile",
+    "technologies": ["React", "Node.js", "JavaScript", "PostgreSQL", "MercadoPago"]
 },
 {
     "id": 2,
-    "title": "Sistema de Gestion de Reservistas Militares (SIGEPER)",
+    "title": "Sistema SIGEPER (Reserva Militar)",
     "image": "/Sigeper.webp",
-    "images":["Sigeper.webp"],
-    "shortDescription":["Proyecto enfocado en solucionar la gestión manual y dispersa de la Reserva Militar. ",
-                        "Desarrollamos SIGEPER, un sistema web centralizado para registrar, actualizar y consultar el historial completo del personal. ",
-                        "El proyecto se implementó utilizando un stack de Django (Python),PostgreSQL y Bootstrap.",
-                        ""],
-    "longDescription": "Descripción detallada del buscador de películas...",
-    "demoLink": "[LINK_A_TU_DEMO_2]",
-    "githubLink": "[LINK_A_TU_GITHUB_2]",
-    "technologies": ["Python", "Django" ,"PostgreSQL" , "Bootstrap"]
+    "images": ["/Sigeper.webp"],
+    "shortDescription": "Sistema institucional de gestión de personal desarrollado con Python y Django para la Reserva Militar del Ejército de Chile. La plataforma centraliza perfiles, estados de servicio y asignaciones sobre una base de datos PostgreSQL, utilizando una interfaz profesional construida en Bootstrap y JavaScript.",
+    "longDescription": "Desarrollo de una plataforma web integral diseñada para la gestión avanzada y centralizada del personal perteneciente a la Reserva Militar. El proyecto se enfocó en resolver la dispersión de información crítica mediante la implementación de una arquitectura robusta basada en el framework Django y el lenguaje Python, herramientas seleccionadas por su alta seguridad y eficiencia en el manejo de datos sensibles. El sistema integra un modelo de datos relacional en PostgreSQL optimizado para consultas complejas y la generación de reportes históricos de perfiles y estados de servicio en tiempo real. Además, implementé un sistema de seguridad jerárquico basado en roles para garantizar que la información institucional sea accesible únicamente por personal autorizado. La interfaz de usuario, desarrollada con Bootstrap y componentes dinámicos de JavaScript, asegura una administración clara y eficiente, logrando reducir significativamente los tiempos de respuesta operativa y administrativa de la institución.",
+    "demoLink": "",
+    "githubLink": "https://github.com/Jabarona/PROYECTO-SIGEPER---RESERVA-MILITAR.git",
+    "technologies": ["Python", "Django", "PostgreSQL", "Bootstrap", "JavaScript"]
 },
+
 {
-    "id": 3,
-    "title": "Juego Desarrollado en Godot (CUMBIA ESTELAR)",
-    "image":"/CumbiaStar.webp",
-    "images": ["/CumbiaStar.webp","/SelectorPlayer.webp","/Tuto.webp", 
-    "/StagePartida.webp" , "/Cupon.webp" ,"/GameOver.webp"
-],
-    "shortDescription": "Juego interactivo en Godot/GDScript El juego incentiva a los clientes a participar para ganar códigos de descuento, los cuales se validan contra una base de datos MySQL y se envían automáticamente por email. ",
-    "longDescription": [
-    "A petición de la tienda de informática PorUsB, desarrollé una solución de marketing 'Play-to-Win' para fidelizar clientes y generar ventas. ",
-    "El proyecto consistió en un videojuego completo hecho en Godot Engine, usando GDScript (similar a Python) para toda la lógica de juego y la interfaz. ",
-    "Al alcanzar un puntaje objetivo, el jugador accede a un formulario que se conecta a una base de datos MySQL que gestiona los códigos de descuentos. ",
-    "Finalmente, el sistema valida el logro y envía automáticamente el código ganado al email del jugador, cerrando el ciclo de marketing. ",
-    "Despues con este codigo se hace valido el descuento obtenido para compras en la tienda. "
-],
-    "demoLink": "[LINK_A_VIDEO_O_DEMO_CUMBIA]",
-    "githubLink": "[LINK_A_TU_GITHUB_CUMBIA]",
-    "technologies": ["Godot", "GDScript", "MySQL"]
+    "id": 1,
+    "title": "Aplicación Móvil (DirtyJeans)",
+    "image": "/DirtyJeans.webp",
+    "images": ["/DirtyJeans.webp"],
+    "shortDescription": "Solución móvil para la gestión de producción industrial desarrollada con React Native y Node.js. La aplicación automatiza el registro de tareas diarias y el cálculo de remuneraciones semanales mediante una arquitectura robusta sobre PostgreSQL.",
+    "longDescription": "Desarrollo de una solución digital móvil diseñada para optimizar la cadena de producción de una fábrica textil. El sistema reemplazó los registros manuales en planillas Excel por una plataforma móvil centralizada que permite el seguimiento en tiempo real del rendimiento de los trabajadores. El proyecto incluyó el desarrollo de una interfaz fluida en React Native y TypeScript, garantizando una experiencia de usuario óptima en dispositivos móviles. Implementé algoritmos de cálculo automático de remuneraciones basados en metas de producción, lo que eliminó por completo los errores humanos en el proceso de pagos. En el lado del servidor, utilicé Node.js para construir una API RESTful integrada con una base de datos PostgreSQL para el manejo masivo de registros diarios. Además, se incorporó un sistema de generación de reportes analíticos en formato PDF para facilitar la toma de decisiones estratégicas por parte de la administración. Esta herramienta permitió digitalizar íntegramente el flujo administrativo de la planta, mejorando la transparencia y la velocidad operativa.",
+    "demoLink": "",
+    "githubLink": "",
+    "technologies": ["React", "TypeScript", "Node.js", "PostgreSQL","JavaScript"]
 }
+
+
+
 ]
